@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const {
-  post: { data, slug },
+  post: { data },
   isPreview = false,
 } = Astro.props;
 ---
@@ -49,7 +49,7 @@ const {
 </style>
 
 <div>
-  <a href={"/posts/" + slug} class="post-title">{data.title}</a>
+  <a href={data.url} class="post-title">{data.title}</a>
   <p class="post-description" class:list={isPreview ? "hidden" : ""}>{data.description}</p>
 
   <div class="flex items-center justify-between">

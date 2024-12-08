@@ -18,14 +18,14 @@ const publishedPosts = posts?.sort((a, b) => b.data.date.valueOf() - a.data.date
 const projects = (await getCollection("projects"))?.[0]?.data?.slice(0, MAX_LATEST);
 ---
 
-<Layout title="Ayodeji">
+<Layout title="John Caleb">
   <main class="container">
     <SiteHeader />
 
     <section id="about-me">
       <!-- prettier-ignore -->
       <p>
-        Hiya! I am Ayodeji, a software developer, your friendly Neovim enjoyer and a software engineering student somewhere in England. I am constantly learning and very keen on crafting the type of software experience I'd like to use and you can fall in love with - performant, intuitive, real-time, local-first and out of your way. I am a big fan of statically-typed compiled languages, PHP and the BEAM but I frequently (have to) dabble in <a href="/tools">other things</a> too. I <a href="/blog">write</a> here from time to time and I also stream infrequently on <a href="https://twitch.tv/truly_ao">Twitch</a>.
+        Kon'nichiwa! I am John, a software engineer with years of experience in software development. I am constantly learning and very keen on crafting the type of software experience I'd like to use and you can fall in love with. I <a href="https://www.baeldung.com/author/johncaleb">write</a> here from time to time and I also create content infrequently on <a href="https://www.youtube.com/@thejohncaleb">Youtube</a>.
       </p>
     </section>
 
@@ -37,7 +37,7 @@ const projects = (await getCollection("projects"))?.[0]?.data?.slice(0, MAX_LATE
       </div>
 
       <div class="flex w-full justify-end mt-10">
-        <a href="/blog" class="text-sm">View all articles &rarr;</a>
+        <a href="https://www.baeldung.com/author/johncaleb" class="text-sm">View all articles &rarr;</a>
       </div>
     </section>
 
