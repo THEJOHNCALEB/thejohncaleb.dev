@@ -7,7 +7,7 @@ import { getCollection } from "astro:content";
 import H1 from "@components/mdx/H1.astro";
 import MinimalArticleListItem from "@components/items/MinimalArticleListItem.astro";
 
-const MAX_LATEST = 6;
+const MAX_LATEST = 3;
 
 const posts = await getCollection("blog", ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
@@ -25,7 +25,7 @@ const projects = (await getCollection("projects"))?.[0]?.data?.slice(0, MAX_LATE
     <section id="about-me">
       <!-- prettier-ignore -->
       <p>
-        Kon'nichiwa! I am John, a software engineer with years of experience in software development. I am constantly learning and very keen on crafting the type of software experience I'd like to use and you can fall in love with. I <a href="https://www.baeldung.com/author/johncaleb">write</a> here from time to time and I also create content infrequently on <a href="https://www.youtube.com/@thejohncaleb">Youtube</a>.
+        Kon'nichiwa! I am John, a software engineer with years of experience in software development. I am constantly learning and very keen on crafting the type of software experience I'd like to use and you can fall in love with. I write <a href="https://www.baeldung.com/author/johncaleb">here</a> from time to time and I also create content infrequently on <a href="https://www.youtube.com/@thejohncaleb">Youtube</a>.
       </p>
     </section>
 
