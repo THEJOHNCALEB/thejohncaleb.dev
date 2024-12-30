@@ -49,9 +49,15 @@ if (!keywords) keywords = "john, thejohncaleb, caleb, express, c#, typescript, j
 
     <script src="/vendor/alpine-persist.js" defer is:inline></script>
     <script src="/vendor/alpine.js" defer is:inline></script>
-    
-<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-86MMSKSPVB"></script>
+<script type="module">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-86MMSKSPVB');
+</script>
     <script>
       const headers = document.querySelectorAll("[data-section-header]");
       if (headers?.length > 1) {
@@ -67,12 +73,6 @@ if (!keywords) keywords = "john, thejohncaleb, caleb, express, c#, typescript, j
           });
         });
       }
-
-      window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-86MMSKSPVB');
     </script>
 
     <title>{title}</title>
