@@ -1,36 +1,68 @@
 [
 	{
-		"name": "UniKoin",
-		"description": "Event Management Platform",
-		"website_url": null,
-		"github_url": "https://github.com/THEJOHNCALEB/EventManagement",
-		"image": "robin.png",
+		"name": "Unikoin",
+		"description": "A platform for managing events, offering tools for seamless organization and tracking.",
+		"website_url": "https://unikoin.com.ng",
+		"github_url": null,
+		"image": "unikoin.png",
 		"status": "active",
 		"tags": [
-			".net",
-			"javascript"
+			"asp.net"
+		]
+	},
+	{
+		"name": "Kanri",
+		"description": "A web application designed to streamline e-commerce inventory management for businesses.",
+		"website_url": null,
+		"github_url": "https://github.com/THEJOHNCALEB/kanri",
+		"image": "kanri.png",
+		"status": "active",
+		"tags": [
+			"asp.net"
 		]
 	},
 	{
 		"name": "Supply Chain",
-		"description": "E-commerce Supply Chain Regulator",
+		"description": "A solution for regulating and optimizing supply chain processes in e-commerce businesses.",
 		"website_url": null,
 		"github_url": "https://github.com/THEJOHNCALEB/SupplyChain",
-		"image": "robin.png",
+		"image": "supply.png",
 		"status": "active",
 		"tags": [
-			".net"
+			"asp.net"
+		]
+	},
+	{
+		"name": "Soly Computers",
+		"description": "A website created for Soly Computers, a computer training facility focused on tech education.",
+		"website_url": "https://solycomputers.com.ng/",
+		"github_url": null,
+		"image": "soly.png",
+		"status": "active",
+		"tags": [
+			"asp.net"
 		]
 	},
 	{
 		"name": "Cartify",
-		"description": "AI Powered Shopping Lists",
+		"description": "An AI-powered mobile app for creating and managing shopping lists efficiently.",
 		"website_url": "https://usecartify.vercel.app",
 		"github_url": null,
-		"image": "robin.png",
+		"image": "cartify.png",
+		"status": "unmaintained",
+		"tags": [
+			"typescript", "react-native"
+		]
+	},
+	{
+		"name": "Tasuku",
+		"description": "A Flutter app designed to help users organize and track their daily tasks with ease.",
+		"website_url": null,
+		"github_url": "https://github.com/THEJOHNCALEB/Tasuku",
+		"image": "tasuku.png",
 		"status": "active",
 		"tags": [
-			"react native"
+			"Flutter"
 		]
 	}
 ]
