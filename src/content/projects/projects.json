@@ -76,5 +76,16 @@
 			"asp.net",
 			"c#"
 		]
+	},
+	{
+		"name": "Moviely",
+		"description": "Get informations about a movie, search for a movie, view high rated, trending and most popular movies.",
+		"website_url": "https://moviely.netlify.app",
+		"github_url": "https://github.com/THEJOHNCALEB/Moviely",
+		"image": "moviely.png",
+		"status": "active",
+		"tags": [
+			"javascript"
+		]
 	}
 ]
