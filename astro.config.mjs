@@ -9,13 +9,13 @@ import mdx from "@astrojs/mdx";
 // TODO: remove plugins
 // https://astro.build/config
 export default defineConfig({
-  site: "https://trulyao.dev",
+  site: "https://thejohncaleb.vercel.app",
   integrations: [tailwind(), icon(), solidJs(), mdx()],
   markdown: {
     syntaxHighlight: "prism",
-    rehypePlugins: [[externalize, { domain: "trulyao.dev" }]],
+    rehypePlugins: [[externalize, { domain: "https://thejohncaleb.vercel.app/" }]],
   },
   redirects: {
-    "/live": { status: 302, destination: "https://twitch.tv/truly_ao" },
+    "/live": { status: 302, destination: "https://youtube.com/@thejohncaleb" },
   },
 });
