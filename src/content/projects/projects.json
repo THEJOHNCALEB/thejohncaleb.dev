@@ -24,7 +24,7 @@
 	{
 		"name": "mite",
 		"description": "CLI file reader that allows you to search for a specific word within a file and prints the line containing that word.",
-		"website_url": null,
+		"website_url": "https://crates.io/crates/mite",
 		"github_url": "https://github.com/THEJOHNCALEB/mite",
 		"image": "mite.png",
 		"status": "active",
