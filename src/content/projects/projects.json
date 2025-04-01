@@ -5,7 +5,7 @@
 		"website_url": "https://unikoin.com.ng",
 		"github_url": null,
 		"image": "unikoin.png",
-		"status": "wip",
+		"status": "active",
 		"tags": [
 			"asp.net"
 		]
@@ -16,7 +16,7 @@
 		"website_url": "https://subscribenow.com.ng",
 		"github_url": null,
 		"image": "subscribe.png",
-		"status": "unmaintained",
+		"status": "archived",
 		"tags": [
 			"asp.net"
 		]
@@ -35,10 +35,10 @@
 	{
 		"name": "keke",
 		"description": "Uber, but for autorickshaws :)",
-		"website_url": "https://keke.com.ng/",
+		"website_url": "http://usekeke.up.railway.app/",
 		"github_url": null,
 		"image": "keke.png",
-		"status": "archived",
+		"status": "unmaintained",
 		"tags": [
 			"asp.net"
 		]
