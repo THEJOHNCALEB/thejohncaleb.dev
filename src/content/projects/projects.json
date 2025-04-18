@@ -11,6 +11,17 @@
 		]
 	},
 	{
+		"name": "cruiseup",
+		"description": "Gateway for Social Financing, enabling users to create and manage social financing groups.",
+		"website_url": "https://cruiseup.up.railway.app/",
+		"github_url": null,
+		"image": "cruiseup.png",
+		"status": "active",
+		"tags": [
+			"asp.net", "c#", "javascript"
+		]
+	},
+	{
 		"name": "Subscribe Now",
 		"description": "Subscription management platform that enables users to easily subscribe to various services and manage their subscriptions.",
 		"website_url": "https://subscribenow.com.ng",
