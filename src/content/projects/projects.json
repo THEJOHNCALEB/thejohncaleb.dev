@@ -1,6 +1,17 @@
 [
+		{
+		"name": "translag",
+		"description": "Real-time Translation for Nigerian Languages.",
+		"website_url": "https://translag.vercel.app",
+		"github_url": null,
+		"image": "translag.png",
+		"status": "active",
+		"tags": [
+			"flutter", "C# .net"
+		]
+	},
 	{
-		"name": "Unikoin",
+		"name": "unikoin",
 		"description": "Event management platform, offering tools for seamless organization and tracking.",
 		"website_url": "https://unikoin.up.railway.app/",
 		"github_url": null,
@@ -11,18 +22,7 @@
 		]
 	},
 	{
-		"name": "cruiseup",
-		"description": "Gateway for Social Financing, enabling users to create and manage social financing groups.",
-		"website_url": "https://cruiseup.up.railway.app/",
-		"github_url": null,
-		"image": "cruiseup.png",
-		"status": "active",
-		"tags": [
-			"asp.net", "c#", "javascript"
-		]
-	},
-	{
-		"name": "Subscribe Now",
+		"name": "subscribe now",
 		"description": "Subscription management platform that enables users to easily subscribe to various services and manage their subscriptions.",
 		"website_url": "https://subscribenow.com.ng",
 		"github_url": null,
@@ -62,7 +62,7 @@
 		"image": "tasuku.png",
 		"status": "active",
 		"tags": [
-			"Flutter","dart"
+			"Flutter"
 		]
 	},
 	{
