@@ -16,6 +16,8 @@
     "@astrojs/rss": "^4.0.9",
     "@astrojs/solid-js": "^4.4.4",
     "@astrojs/tailwind": "^5.1.2",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "astro": "^4.16.14",
     "astro-icon": "^1.1.1",
     "sharp": "^0.33.5",
