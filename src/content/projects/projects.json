@@ -1,5 +1,16 @@
 [
-		{
+	{
+		"name": "resumecraft",
+		"description": "AI Powered Resume Builder",
+		"website_url": "https://play.google.com/store/apps/details?id=com.resumecraft.app",
+		"github_url": null,
+		"image": "resumecraft.png",
+		"status": "active",
+		"tags": [
+			"flutter"
+		]
+	},
+	{
 		"name": "translag",
 		"description": "Real-time Translation for Nigerian Languages.",
 		"website_url": "https://translag.vercel.app",
@@ -11,14 +22,14 @@
 		]
 	},
 	{
-		"name": "unikoin",
-		"description": "Event management platform, offering tools for seamless organization and tracking.",
-		"website_url": "https://unikoin.up.railway.app/",
+		"name": "just being social",
+		"description": "AI powered event management platform, offering tools for seamless organization and tracking.",
+		"website_url": "https://justbesocial.xyz",
 		"github_url": null,
 		"image": "unikoin.png",
 		"status": "active",
 		"tags": [
-			"asp.net"
+			"C# .net"
 		]
 	},
 	{
