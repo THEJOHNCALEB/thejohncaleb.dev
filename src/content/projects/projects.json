@@ -1,4 +1,15 @@
 [
+		{
+		"name": "just being social",
+		"description": "AI powered event management platform, offering tools for seamless organization and tracking.",
+		"website_url": "https://justbesocial.xyz",
+		"github_url": null,
+		"image": "unikoin.png",
+		"status": "active",
+		"tags": [
+			"C# .net"
+		]
+	},
 	{
 		"name": "resumecraft",
 		"description": "AI Powered Resume Builder",
@@ -22,14 +33,14 @@
 		]
 	},
 	{
-		"name": "just being social",
-		"description": "AI powered event management platform, offering tools for seamless organization and tracking.",
-		"website_url": "https://justbesocial.xyz",
+		"name": "buyenergy",
+		"description": "Utility Payments & Renewable Energy Mobile App",
+		"website_url": "https://buyenergyunits.com",
 		"github_url": null,
-		"image": "unikoin.png",
+		"image": "buyenergy.png",
 		"status": "active",
 		"tags": [
-			"C# .net"
+			"flutter", "Laravel"
 		]
 	},
 	{
