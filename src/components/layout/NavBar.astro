@@ -63,7 +63,7 @@ import { Icon } from "astro-icon/components";
 
   // @fixes: so that we don't have to tap twice to switch to light mode on first visit if the device prefers dark mode
   if (prefersDarkMode && !(localStorage.getItem("theme") ?? "")) {
-    localStorage.setItem("theme", JSON.stringify("dark"));
+    localStorage.setItem("theme", "dark");
   }
 
   // Set the theme on page load
