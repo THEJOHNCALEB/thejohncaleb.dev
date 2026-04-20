@@ -1,4 +1,36 @@
 [
+	{
+		"name": "assetry",
+		"description": "AI powered event management platform, offering tools for seamless organization and tracking.",
+		"website_url": null,
+		"github_url": null,
+		"image": "unikoin.png",
+		"status": "wip",
+		"tags": [
+			"c#", "asp.net","flutter"
+		]
+	},{
+		"name": "gymbot.fit app",
+		"description": "a mobile app  ",
+		"website_url": null,
+		"github_url": null,
+		"image": "unikoin.png",
+		"status": "wip",
+		"tags": [
+			"flutter"
+		]
+	},
+			{
+		"name": "jbs scanner",
+		"description": "Event management scanner and Check in app for justbesocial.xyz",
+		"website_url": "https://apps.apple.com/ng/app/jbs-scanner/id6756948422",
+		"github_url": null,
+		"image": "unikoin.png",
+		"status": "active",
+		"tags": [
+			"flutter", "c#" ,"asp.net"
+		]
+	},
 		{
 		"name": "just being social",
 		"description": "AI powered event management platform, offering tools for seamless organization and tracking.",
@@ -7,7 +39,7 @@
 		"image": "unikoin.png",
 		"status": "active",
 		"tags": [
-			"C# .net"
+			"c#", "asp.net"
 		]
 	},
 	{
@@ -29,7 +61,7 @@
 		"image": "translag.png",
 		"status": "active",
 		"tags": [
-			"flutter", "C# .net"
+			"flutter", "c#",  "asp.net"
 		]
 	},
 	{
@@ -40,7 +72,7 @@
 		"image": "buyenergy.png",
 		"status": "active",
 		"tags": [
-			"flutter", "Laravel"
+			"flutter", "laravel"
 		]
 	},
 	{
@@ -79,12 +111,12 @@
 	{
 		"name": "tasuku",
 		"description": "A Flutter app designed to help users organize and track their daily tasks with ease.",
-		"website_url": null,
-		"github_url": "https://github.com/THEJOHNCALEB/Tasuku",
+		"website_url": "https://appetize.io/app/b_uwlyjtsiyrlyhhsimlhts5ywdu",
+		"github_url": "https://github.com/THEJOHNCALEB/smart_toolkit",
 		"image": "tasuku.png",
 		"status": "active",
 		"tags": [
-			"Flutter"
+			"flutter"
 		]
 	},
 	{
@@ -96,7 +128,7 @@
 		"status": "active",
 		"tags": [
 			"asp.net",
-			"c#"
+			"c# asp.net"
 		]
 	},
 	{
