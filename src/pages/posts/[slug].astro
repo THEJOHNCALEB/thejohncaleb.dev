@@ -1,0 +1,43 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SiteHeader from "@components/layout/SiteHeader.astro";
+import Tags from "@components/misc/Tags.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
+  return await Promise.all(
+    posts.map(async (post) => ({
+      params: { slug: post.slug },
+      props: { post },
+    })),
+  );
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title} desc={post.data.description} keywords={post.data.keywords} tags={post.data.tags} pubDate={post.data.date} metaImage={`https://thejohncaleb.vercel.app/og/${post.slug}.png`}>
+  <main class="container">
+    <SiteHeader />
+
+    <article class="mt-6">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">{post.data.title}</h1>
+
+      <div class="flex items-center gap-x-3 text-sm text-secondary-outline mb-10">
+        <time datetime={post.data.date.toISOString()}>
+          {new Date(post.data.date).toLocaleDateString("en-GB")}
+        </time>
+        <Tags data={post.data.tags ?? []} />
+      </div>
+
+      <div class="blog-content">
+        <Content />
+      </div>
+    </article>
+  </main>
+</Layout>

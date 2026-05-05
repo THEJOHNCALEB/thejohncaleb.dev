@@ -1,0 +1,30 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SiteHeader from "@components/layout/SiteHeader.astro";
+import MinimalArticleListItem from "@components/items/MinimalArticleListItem.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
+
+const publishedPosts = posts?.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Layout title="Posts">
+  <main class="container">
+    <SiteHeader />
+
+    <h2 class="text-3xl mb-3">Posts</h2>
+
+    <p>
+Thoughts on building stuff, life, and whatever I find interesting :D
+    </p>
+
+    <div class="mt-6 space-y-5">
+      {publishedPosts.map((post) => <MinimalArticleListItem post={post} />)}
+    </div>
+  </main>
+</Layout>

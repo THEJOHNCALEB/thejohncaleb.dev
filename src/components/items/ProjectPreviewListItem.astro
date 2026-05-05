@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon/components";
+import Show from "@components/misc/Show.astro";
 import type { CollectionEntry } from "astro:content";
 
 type Project = CollectionEntry<"projects">["data"][number];
@@ -19,6 +21,29 @@ const url = (!!project.website_url ? project.website_url : project.github_url) ?
 </style>
 
 <div class="space-y-1">
-  <a href={url} class="text-primary-text-light dark:text-primary-text-dark text-lg font-medium no-underline">{project.name}</a>
+  <div class="flex items-center gap-x-2.5">
+    <a href={url} class="text-primary-text-light dark:text-primary-text-dark text-lg font-medium no-underline">
+      {project.name}
+      {project.status != "active" ? <sup class="text-sm font-light opacity-60">({project.status})</sup> : null}
+    </a>
+
+    <span class="text-base space-x-1.5">
+      <Show when={!!project.website_url}>
+        <a href={project.website_url ?? ""} target="_blank" title="Visit website"><Icon name="tabler:external-link" /></a>
+      </Show>
+
+      <Show when={!!project.github_url}>
+        <a href={project.github_url ?? ""} target="_blank" title="View on Github"><Icon name="tabler:brand-github" /></a>
+      </Show>
+
+      <Show when={!!project.playstore_url}>
+        <a href={project.playstore_url ?? ""} target="_blank" title="View on Play Store"><Icon name="tabler:brand-google-play" /></a>
+      </Show>
+
+      <Show when={!!project.appstore_url}>
+        <a href={project.appstore_url ?? ""} target="_blank" title="View on App Store"><Icon name="tabler:brand-apple" /></a>
+      </Show>
+    </span>
+  </div>
   <p class="text-sm text-primary-text-light/60 dark:text-primary-text-dark/60 leading-7 tracking-normal">{project.description}</p>
 </div>

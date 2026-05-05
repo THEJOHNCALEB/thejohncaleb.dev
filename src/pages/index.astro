@@ -16,6 +16,9 @@ const posts = await getCollection("blog", ({ data }) => {
 const publishedPosts = posts?.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())?.slice(0, MAX_LATEST);
 
 const projects = (await getCollection("projects"))?.[0]?.data?.slice(0, MAX_LATEST);
+
+const talks = (await getCollection("talks"))?.[0]?.data
+  ?.sort((a, b) => b.date.valueOf() - a.date.valueOf());
 ---
 
 <Layout title="John Caleb">
@@ -25,7 +28,7 @@ const projects = (await getCollection("projects"))?.[0]?.data?.slice(0, MAX_LATE
     <section id="about-me">
       <!-- prettier-ignore -->
       <p>
-  Kon'nichiwa! I am John, a software engineer with years of experience in software development. Currently working at <a href="https://smartqix.com/" target="_blank" rel="noopener noreferrer">Smartqix LLC</a>, previously at <a href="https://tirith.tech/" target="_blank" rel="noopener noreferrer">Tirith Technology LLC</a>. I am constantly learning and very keen on crafting the type of software experience I'd like to use and you can fall in love with. I write <a href="https://www.baeldung.com/author/johncaleb" target="_blank" rel="noopener noreferrer">here</a> from time to time.
+  Kon'nichiwa! I am John, a software engineer with years of experience in software development. Currently working at <a href="https://smartqix.com/" target="_blank" rel="noopener noreferrer">Smartqix LLC</a>, previously at <a href="https://tirith.tech/" target="_blank" rel="noopener noreferrer">Tirith Technology LLC</a>. I am constantly learning and very keen on crafting the type of software experience I'd like to use and you can fall in love with. I write <a href="/posts" rel="noopener noreferrer">here</a> from time to time.
 </p>
     </section>
 
@@ -43,7 +46,7 @@ const projects = (await getCollection("projects"))?.[0]?.data?.slice(0, MAX_LATE
       </div>
     </section>
 
-    <section class="mt-6" id="articles">
+    <section class="mt-6" id="posts">
       <H1>Latest posts</H1>
 
       <div class="mt-5 space-y-5">
@@ -51,38 +54,28 @@ const projects = (await getCollection("projects"))?.[0]?.data?.slice(0, MAX_LATE
       </div>
 
       <div class="flex w-full justify-end mt-10">
-        <a href="https://www.baeldung.com/author/johncaleb#post-75829" class="text-sm">View all articles &rarr;</a>
+        <a href="/posts" class="text-sm">View all posts &rarr;</a>
       </div>
     </section>
 
     <section id="talks" class="mt-12">
       <H1>Talks & Slides</H1>
-    <!-- TODO: modify to add slides dynamically -->
-      
-      <div class="mt-5 space-y-5">
-        <div class="flex gap-2.5">
-          <time datetime="14/02/2025" class="text-secondary-outline">
-            04/04/2025
-          </time>
-        
-          <a href="https://github.com/thejohncaleb/slides/blob/main/JAVASCRIPT-V1-BSG.pdf?raw=true" class="post-title">JavaScript for Beginners - BSG | RAIN 2025</a>
-        </div>
-      </div>    
 
-     <div class="mt-5 space-y-5">
-        <div class="flex gap-2.5">
-          <time datetime="14/02/2025" class="text-secondary-outline">
-            23/07/2025
-          </time>
-        
-          <a href="https://www.canva.com/design/DAGp88YUROI/29ASt8PlN9bBe5vI3F8g3g/edit?utm_content=DAGp88YUROI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="post-title">My Talk About Translag At IEEE Local Language Connect FUTMINNA 2025</a>
-        </div>
-      </div> 
-      
+      <div class="mt-5 space-y-5">
+        {talks.map((talk) => (
+          <div class="flex gap-2.5">
+            <time datetime={talk.date.toISOString().split("T")[0]} class="text-secondary-outline">
+              {new Date(talk.date).toLocaleDateString("en-GB")}
+            </time>
+            <a href={talk.url} class="post-title">{talk.title}</a>
+          </div>
+        ))}
+      </div>
+
       <div class="flex w-full justify-end mt-10">
-        <a href="https://github.com/thejohncaleb/slides" class="text-sm">View all slides &rarr;</a>
+        <a href="/talks" class="text-sm">View all talks and slides &rarr;</a>
       </div>
     </section>
-    
+
   </main>
 </Layout>

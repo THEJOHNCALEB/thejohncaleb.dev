@@ -16,8 +16,8 @@ export async function GET(context: { site: string }) {
   }));
 
   return rss({
-    title: "Ayodeji's Blog",
-    description: "A blog about anything and everything I find interesting.",
+    title: "John Caleb",
+    description: "A blog about software engineering, mobile development, and everything in between.",
     site: context.site,
     items: posts,
   });
