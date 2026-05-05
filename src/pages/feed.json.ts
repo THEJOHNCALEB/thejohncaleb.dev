@@ -12,7 +12,7 @@ export async function GET(context: { site: string }) {
     tags: post.data.tags,
     summary: post.data.description,
     content_text: post.body,
-    image: getMetaUrl(post.data.title, post.data.date),
+    image: getMetaUrl(post.slug),
     date_published: post.data.date,
   }));
 

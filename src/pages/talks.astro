@@ -1,0 +1,31 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SiteHeader from "@components/layout/SiteHeader.astro";
+import { getCollection } from "astro:content";
+
+const talks = (await getCollection("talks"))?.[0]?.data
+  ?.sort((a, b) => b.date.valueOf() - a.date.valueOf());
+---
+
+<Layout title="Talks & Slides">
+  <main class="container">
+    <SiteHeader />
+
+    <h2 class="text-3xl mb-3">Talks & Slides</h2>
+
+    <p>
+      Conference talks, workshops, and presentations I've delivered. I enjoy sharing knowledge and connecting with the developer community.
+    </p>
+
+    <div class="mt-6 space-y-5">
+      {talks.map((talk) => (
+        <div class="flex gap-2.5">
+          <time datetime={talk.date.toISOString().split("T")[0]} class="text-secondary-outline">
+            {new Date(talk.date).toLocaleDateString("en-GB")}
+          </time>
+          <a href={talk.url} class="post-title">{talk.title}</a>
+        </div>
+      ))}
+    </div>
+  </main>
+</Layout>

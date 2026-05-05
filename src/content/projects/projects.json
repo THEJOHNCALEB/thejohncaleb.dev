@@ -1,145 +1,112 @@
 [
-	{
-		"name": "assetry",
-		"description": "AI powered event management platform, offering tools for seamless organization and tracking.",
-		"website_url": null,
-		"github_url": null,
-		"image": "unikoin.png",
-		"status": "wip",
-		"tags": [
-			"c#", "asp.net","flutter"
-		]
-	},{
-		"name": "gymbot.fit app",
-		"description": "a mobile app  ",
-		"website_url": null,
-		"github_url": null,
-		"image": "unikoin.png",
-		"status": "wip",
-		"tags": [
-			"flutter"
-		]
-	},
-			{
-		"name": "jbs scanner",
-		"description": "Event management scanner and Check in app for justbesocial.xyz",
-		"website_url": "https://apps.apple.com/ng/app/jbs-scanner/id6756948422",
-		"github_url": null,
-		"image": "unikoin.png",
-		"status": "active",
-		"tags": [
-			"flutter", "c#" ,"asp.net"
-		]
-	},
-		{
-		"name": "just being social",
-		"description": "AI powered event management platform, offering tools for seamless organization and tracking.",
-		"website_url": "https://justbesocial.xyz",
-		"github_url": null,
-		"image": "unikoin.png",
-		"status": "active",
-		"tags": [
-			"c#", "asp.net"
-		]
-	},
-	{
-		"name": "resumecraft",
-		"description": "AI Powered Resume Builder",
-		"website_url": "https://play.google.com/store/apps/details?id=com.resumecraft.app",
-		"github_url": null,
-		"image": "resumecraft.png",
-		"status": "active",
-		"tags": [
-			"flutter"
-		]
-	},
-	{
-		"name": "translag",
-		"description": "Real-time Translation for African Languages.",
-		"website_url": "https://translag.vercel.app",
-		"github_url": null,
-		"image": "translag.png",
-		"status": "active",
-		"tags": [
-			"flutter", "c#",  "asp.net"
-		]
-	},
-	{
-		"name": "buyenergy",
-		"description": "Utility Payments & Renewable Energy Mobile App",
-		"website_url": "https://buyenergyunits.com",
-		"github_url": null,
-		"image": "buyenergy.png",
-		"status": "active",
-		"tags": [
-			"flutter", "laravel"
-		]
-	},
-	{
-		"name": "subscribe now",
-		"description": "Subscription management platform that enables users to easily subscribe to various services and manage their subscriptions.",
-		"website_url": "https://subscribenow.com.ng",
-		"github_url": null,
-		"image": "subscribe.png",
-		"status": "archived",
-		"tags": [
-			"asp.net"
-		]
-	},
-	{
-		"name": "mite",
-		"description": "CLI file reader that allows you to search for a specific word within a file and prints the line containing that word.",
-		"website_url": "https://crates.io/crates/mite",
-		"github_url": "https://github.com/THEJOHNCALEB/mite",
-		"image": "mite.png",
-		"status": "active",
-		"tags": [
-			"rust"
-		]
-	},
-	{
-		"name": "keke",
-		"description": "Uber, but for autorickshaws :)",
-		"website_url": "http://usekeke.up.railway.app/",
-		"github_url": null,
-		"image": "keke.png",
-		"status": "unmaintained",
-		"tags": [
-			"asp.net"
-		]
-	},
-	{
-		"name": "tasuku",
-		"description": "A Flutter app designed to help users organize and track their daily tasks with ease.",
-		"website_url": "https://appetize.io/app/b_uwlyjtsiyrlyhhsimlhts5ywdu",
-		"github_url": "https://github.com/THEJOHNCALEB/smart_toolkit",
-		"image": "tasuku.png",
-		"status": "active",
-		"tags": [
-			"flutter"
-		]
-	},
-	{
-		"name": "supply chain",
-		"description": "A solution for regulating and optimizing supply chain processes in e-commerce businesses.",
-		"website_url": null,
-		"github_url": "https://github.com/THEJOHNCALEB/SupplyChain",
-		"image": "supply.png",
-		"status": "active",
-		"tags": [
-			"asp.net",
-			"c# asp.net"
-		]
-	},
-	{
-		"name": "moviely",
-		"description": "Get informations about a movie, search for a movie, view high rated, trending and most popular movies.",
-		"website_url": "https://moviely.netlify.app",
-		"github_url": "https://github.com/THEJOHNCALEB/Moviely",
-		"image": "moviely.png",
-		"status": "active",
-		"tags": [
-			"javascript"
-		]
-	}
+  {
+    "name": "gymbot.fit mobile app",
+    "description": "AI fitness agent in your pocket",
+    "website_url": null,
+    "github_url": null,
+    "playstore_url": null,
+    "appstore_url": null,
+    "image": "gymbot.png",
+    "status": "wip",
+    "tags": ["flutter"]
+  },
+  {
+    "name": "naijaradar",
+    "description": "Real-time alerts for flight delays, cancellations, and gate changes across all nigerian airports and international routes",
+    "website_url": null,
+    "github_url": null,
+    "playstore_url": null,
+    "appstore_url": null,
+    "image": "radar.png",
+    "status": "wip",
+    "tags": ["flutter"]
+  },
+  {
+    "name": "just being social",
+    "description": "AI powered event management platform, offering tools for seamless organization and tracking.",
+    "website_url": "https://justbesocial.xyz",
+    "github_url": null,
+    "playstore_url": null,
+    "appstore_url": "https://apps.apple.com/ng/app/jbs-scanner/id6756948422",
+    "image": "unikoin.png",
+    "status": "active",
+    "tags": ["c#", "asp.net", "flutter"]
+  },
+  {
+    "name": "resumecraft",
+    "description": "AI Powered Resume Builder",
+    "website_url": null,
+    "github_url": null,
+    "playstore_url": "https://play.google.com/store/apps/details?id=com.resumecraft.app",
+    "appstore_url": null,
+    "image": "resumecraft.png",
+    "status": "active",
+    "tags": ["flutter"]
+  },
+  {
+    "name": "translag",
+    "description": "Real-time Translation for African Languages.",
+    "website_url": "https://translag.vercel.app",
+    "github_url": null,
+    "playstore_url": null,
+    "appstore_url": null,
+    "image": "translag.png",
+    "status": "active",
+    "tags": ["flutter", "c#", "asp.net"]
+  },
+  {
+    "name": "buyenergy",
+    "description": "Utility Payments & Renewable Energy Mobile App",
+    "website_url": "https://buyenergyunits.com",
+    "github_url": null,
+    "playstore_url": null,
+    "appstore_url": null,
+    "image": "buyenergy.png",
+    "status": "active",
+    "tags": ["flutter", "laravel"]
+  },
+  {
+    "name": "mite",
+    "description": "CLI file reader that allows you to search for a specific word within a file and prints the line containing that word.",
+    "website_url": "https://crates.io/crates/mite",
+    "github_url": "https://github.com/THEJOHNCALEB/mite",
+    "playstore_url": null,
+    "appstore_url": null,
+    "image": "mite.png",
+    "status": "active",
+    "tags": ["rust"]
+  },
+  {
+    "name": "tasuku",
+    "description": "A Flutter app designed to help users organize and track their daily tasks with ease.",
+    "website_url": "https://appetize.io/app/b_uwlyjtsiyrlyhhsimlhts5ywdu",
+    "github_url": "https://github.com/THEJOHNCALEB/smart_toolkit",
+    "playstore_url": null,
+    "appstore_url": null,
+    "image": "tasuku.png",
+    "status": "active",
+    "tags": ["flutter"]
+  },
+  {
+    "name": "supply chain",
+    "description": "A solution for regulating and optimizing supply chain processes in e-commerce businesses.",
+    "website_url": null,
+    "github_url": "https://github.com/THEJOHNCALEB/SupplyChain",
+    "playstore_url": null,
+    "appstore_url": null,
+    "image": "supply.png",
+    "status": "active",
+    "tags": ["asp.net", "c# asp.net"]
+  },
+  {
+    "name": "moviely",
+    "description": "Get informations about a movie, search for a movie, view high rated, trending and most popular movies.",
+    "website_url": "https://moviely.netlify.app",
+    "github_url": "https://github.com/THEJOHNCALEB/Moviely",
+    "playstore_url": null,
+    "appstore_url": null,
+    "image": "moviely.png",
+    "status": "active",
+    "tags": ["javascript"]
+  }
 ]

@@ -12,29 +12,13 @@ export function slugify(text: string): string {
 }
 
 let cachedMetaUrl: URL;
-export function getMetaUrl(title: string, pubDate: Date) {
-  const formattedDAte = pubDate
-    .toLocaleString("en-US", { dateStyle: "medium" })
-    .replace(/,/g, "");
-
+export function getMetaUrl(slug: string) {
   if (cachedMetaUrl) {
-    cachedMetaUrl.searchParams.set(
-      "vars",
-      `title:${title},date:${formattedDAte}`,
-    );
+    cachedMetaUrl.pathname = `/og/${slug}.png`;
     return cachedMetaUrl.href;
   }
 
-  cachedMetaUrl = new URL(
-    "https://og.trulyao.dev/api/v1/images/trulyao/preview",
-  );
-  cachedMetaUrl.searchParams.append("variant", "blog");
-  cachedMetaUrl.searchParams.append("style", "blog");
-  cachedMetaUrl.searchParams.append("size", "medium");
-  cachedMetaUrl.searchParams.append(
-    "vars",
-    `title:${title},date:${formattedDAte}`,
-  );
-
+  cachedMetaUrl = new URL("https://thejohncaleb.vercel.app");
+  cachedMetaUrl.pathname = `/og/${slug}.png`;
   return cachedMetaUrl.href;
 }

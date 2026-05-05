@@ -9,7 +9,6 @@ const blogCollection = defineCollection({
     description: z.string(),
     keywords: z.string(),
     draft: z.boolean().default(false),
-    url: z.string(),
   }),
 });
 
@@ -33,6 +32,8 @@ const projectCollection = defineCollection({
       description: z.string(),
       website_url: z.string().url().optional().nullable(),
       github_url: z.string().url().optional().nullable(),
+      playstore_url: z.string().url().optional().nullable(),
+      appstore_url: z.string().url().optional().nullable(),
       image: z.string().regex(/\.(png|jpg|jpeg|gif)$/),
       tags: z.array(z.string().optional()),
       status: z.enum([
@@ -47,8 +48,20 @@ const projectCollection = defineCollection({
   ),
 });
 
+const talksCollection = defineCollection({
+  type: "data",
+  schema: z.array(
+    z.object({
+      title: z.string(),
+      date: z.coerce.date(),
+      url: z.string().url(),
+    }),
+  ),
+});
+
 export const collections = {
   blog: blogCollection,
   projects: projectCollection,
   notes: notesCollection,
+  talks: talksCollection,
 };

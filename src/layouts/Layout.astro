@@ -79,9 +79,11 @@ if (!keywords) keywords = "john, thejohncaleb, caleb, express, c#, typescript, j
 
     <title>{title}</title>
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen">
     <NavBar />
-    <slot />
+    <div class="flex-1">
+      <slot />
+    </div>
     <Footer />
     <Analytics />
     <SpeedInsights />

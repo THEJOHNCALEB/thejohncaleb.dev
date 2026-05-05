@@ -1,0 +1,34 @@
+---
+title: why i built a translation app for african languages
+date: 2025-08-12
+description: The story behind Translag, a real time translation tool for African languages, and why this problem hits close to home.
+keywords: translag, african languages, translation, flutter, language tech
+tags: ["flutter", "africa", "language"]
+draft: false
+---
+
+I grew up speaking English. My parents speak both English and native African dialects to relatives I barely understand. When relatives visit and the conversation switches to something I'm not fluent in, I just sit there smiling at my plate of rice :)
+
+This isn't unique to me. Most people I know navigate multiple languages daily. Nigeria alone has over 500 languages. But most translation tools barely support two or three African languages, and the ones they do support are often hilariously wrong.
+
+So I built [Translag](https://translag.live). A simple real time translation app focused on African languages first.
+
+## what it actually does
+
+You type or speak in one language, it translates to another. Right now it covers a handful of major African languages. The UI is dead simple because honestly nobody wants to read a manual to translate something.
+
+I built it with Flutter on the frontend and C# on the backend. Flutter because I needed one codebase for both platforms and I was already comfortable with it. ASP.NET on the backend because it's what I use for most things and it's not bad at handling real-time stuff.
+
+## what i learned
+
+The hard part isn't the code. It's the data. Good translation datasets for languages like Yoruba or Hausa just don't exist in the same volume as English or Spanish. Most available data is either too formal, too small, or scraped from random corners of the internet with questionable accuracy.
+
+Another thing they don't tell you: African languages are tonal and context-heavy. A word in Yoruba can mean three different things depending on how you say it. Direct word-for-word translation doesn't cut it. You need to understand the sentence, not just the words.
+
+## why it matters
+
+This isn't a startup pitch. I didn't build this to raise money or get acquired. I built it because the problem is real and nobody else was solving it the way I wanted it solved.
+
+There are millions of people who switch between languages twenty times a day. Students studying in a language that isn't their mother tongue. Business owners negotiating across language barriers. Families where the younger generation doesn't speak the language their grandparents do.
+
+If Translag helps even a few hundred people communicate better, that's a win. Everything else is extra ❤️.
