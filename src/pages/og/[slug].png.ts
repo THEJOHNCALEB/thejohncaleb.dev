@@ -43,8 +43,7 @@ export const GET: APIRoute = async ({ props }) => {
 <div style="display: flex; flex-direction: column; justify-content: center; width: 1200px; height: 630px; background-color: #fdf9ef; padding: 80px 100px; font-family: 'IBM Plex Mono'; position: relative;">
   <div style="display: flex; position: absolute; top: 60px; left: 100px; right: 100px;">
     <div style="display: flex; align-items: center; gap: 12px;">
-      <div style="display: flex; width: 40px; height: 40px; border-radius: 6px; background-color: #e4af5d;"></div>
-      <span style="display: flex; font-size: 22px; color: #1b1a18; opacity: 0.6;">thejohncaleb.dev</span>
+      <span style="display: flex; font-size: 22px; color: #1b1a18; opacity: 0.6;">thejohncaleb.com</span>
     </div>
   </div>
   <div style="display: flex; flex-direction: column; flex: 1; justify-content: center;">
@@ -64,7 +63,12 @@ export const GET: APIRoute = async ({ props }) => {
     width: 1200,
     height: 630,
     fonts: [
-      { name: "IBM Plex Mono", data: fontRegular, weight: 400, style: "normal" },
+      {
+        name: "IBM Plex Mono",
+        data: fontRegular,
+        weight: 400,
+        style: "normal",
+      },
       { name: "IBM Plex Mono", data: fontBold, weight: 700, style: "normal" },
     ],
   });
