@@ -13,13 +13,13 @@
   {
     "name": "naijaradar",
     "description": "Real-time alerts for flight delays, cancellations, and gate changes across all nigerian airports and international routes",
-    "website_url": null,
+    "website_url": "https://naijaradar.ng/",
     "github_url": null,
-    "playstore_url": null,
-    "appstore_url": null,
+    "playstore_url": "https://play.google.com/store/apps/details?id=com.naijaradar.naijaradar",
+    "appstore_url": "https://apps.apple.com/us/app/naijaradar/id6765602140",
     "image": "radar.png",
-    "status": "wip",
-    "tags": ["flutter"]
+    "status": "active",
+    "tags": ["flutter", "nextjs"]
   },
   {
     "name": "just being social",
