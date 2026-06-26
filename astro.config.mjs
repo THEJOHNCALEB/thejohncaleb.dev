@@ -13,10 +13,17 @@ export default defineConfig({
   integrations: [tailwind(), icon(), solidJs(), mdx()],
   markdown: {
     syntaxHighlight: "prism",
-    rehypePlugins: [[externalize, { domain: "https://thejohncaleb.vercel.app/" }]],
+    rehypePlugins: [
+      [externalize, { domain: "https://thejohncaleb.vercel.app/" }],
+    ],
   },
   redirects: {
     "/live": { status: 302, destination: "https://youtube.com/@thejohncaleb" },
-    "/cv": { status: 302, destination: "https://drive.google.com/file/d/1i-tXJGW5Sp4w28y5QKlxz6x3jLsuppbQ/view" },
+    "/tlc": { status: 302, destination: "https://canva.link/g0ev0fmlx720c32" },
+    "/cv": {
+      status: 302,
+      destination:
+        "https://drive.google.com/file/d/1i-tXJGW5Sp4w28y5QKlxz6x3jLsuppbQ/view",
+    },
   },
 });
