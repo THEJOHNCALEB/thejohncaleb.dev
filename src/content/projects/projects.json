@@ -1,14 +1,14 @@
 [
   {
-    "name": "gymbot.fit mobile app",
+    "name": "Gymbot Vision",
     "description": "AI fitness agent in your pocket",
-    "website_url": null,
+    "website_url": "https://gymbot.fit",
     "github_url": null,
-    "playstore_url": null,
-    "appstore_url": null,
+    "playstore_url": "https://play.google.com/store/apps/details?id=fit.gymbot.mobile",
+    "appstore_url": "https://apps.apple.com/us/app/gymbot-vision/id6766827120",
     "image": "gymbot.png",
-    "status": "wip",
-    "tags": ["flutter"]
+    "status": "active",
+    "tags": ["flutter", "python"]
   },
   {
     "name": "naijaradar",
