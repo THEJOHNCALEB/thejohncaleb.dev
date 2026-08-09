@@ -30,10 +30,12 @@ const projectCollection = defineCollection({
     z.object({
       name: z.string().regex(/^[A-Za-z0-9-\.\s]+$/),
       description: z.string(),
-      website_url: z.string().url().optional().nullable(),
-      github_url: z.string().url().optional().nullable(),
-      playstore_url: z.string().url().optional().nullable(),
-      appstore_url: z.string().url().optional().nullable(),
+      links: z.array(
+        z.object({
+          title: z.string(),
+          url: z.string().url(),
+        }),
+      ).default([]),
       image: z.string().regex(/\.(png|jpg|jpeg|gif)$/),
       tags: z.array(z.string().optional()),
       status: z.enum([

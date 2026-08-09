@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
 import Show from "@components/misc/Show.astro";
 import Tags from "@components/misc/Tags.astro";
 import type { CollectionEntry } from "astro:content";
@@ -14,8 +13,7 @@ const { project } = Astro.props;
 ---
 
 <style>
-  a,
-  [data-icon] {
+  a {
     display: inline-block;
   }
 </style>
@@ -40,22 +38,10 @@ const { project } = Astro.props;
     <div class="w-full flex justify-between items-center">
       <Tags data={(project?.tags || []) as string[]} />
 
-      <div class="text-2xl space-x-2.5">
-        <Show when={!!project.website_url}>
-          <a href={project.website_url ?? ""} target="_blank" title="Visit website"><Icon name="tabler:external-link" /></a>
-        </Show>
-
-        <Show when={!!project.github_url}>
-          <a href={project.github_url ?? ""} target="_blank" title="View on Github"><Icon name="tabler:brand-github" /></a>
-        </Show>
-
-        <Show when={!!project.playstore_url}>
-          <a href={project.playstore_url ?? ""} target="_blank" title="View on Play Store"><Icon name="tabler:brand-google-play" /></a>
-        </Show>
-
-        <Show when={!!project.appstore_url}>
-          <a href={project.appstore_url ?? ""} target="_blank" title="View on App Store"><Icon name="tabler:brand-apple" /></a>
-        </Show>
+      <div class="text-sm space-x-3">
+        {project.links.map((link) => (
+          <a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a>
+        ))}
       </div>
     </div>
   </div>

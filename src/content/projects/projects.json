@@ -1,11 +1,23 @@
 [
   {
+    "name": "ResQ",
+    "description": "AI Offline Emergency Companion",
+    "links": [
+      { "title": "Github", "url": "https://github.com/thejohncaleb/resq" },
+      { "title": "Demo", "url": "https://www.youtube.com/watch?v=ZUY2emrWtsA" }
+    ],
+    "image": "resq.png",
+    "status": "active",
+    "tags": ["flutter"]
+  },
+  {
     "name": "Gymbot Vision",
     "description": "AI fitness agent in your pocket",
-    "website_url": "https://gymbot.fit",
-    "github_url": null,
-    "playstore_url": "https://play.google.com/store/apps/details?id=fit.gymbot.mobile",
-    "appstore_url": "https://apps.apple.com/us/app/gymbot-vision/id6766827120",
+    "links": [
+      { "title": "Website", "url": "https://gymbot.fit" },
+      { "title": "Play Store", "url": "https://play.google.com/store/apps/details?id=fit.gymbot.mobile" },
+      { "title": "App Store", "url": "https://apps.apple.com/us/app/gymbot-vision/id6766827120" }
+    ],
     "image": "gymbot.png",
     "status": "active",
     "tags": ["flutter", "python"]
@@ -13,10 +25,11 @@
   {
     "name": "naijaradar",
     "description": "Real-time alerts for flight delays, cancellations, and gate changes across all nigerian airports and international routes",
-    "website_url": "https://naijaradar.ng/",
-    "github_url": null,
-    "playstore_url": "https://play.google.com/store/apps/details?id=com.naijaradar.naijaradar",
-    "appstore_url": "https://apps.apple.com/us/app/naijaradar/id6765602140",
+    "links": [
+      { "title": "Website", "url": "https://naijaradar.ng/" },
+      { "title": "Play Store", "url": "https://play.google.com/store/apps/details?id=com.naijaradar.naijaradar" },
+      { "title": "App Store", "url": "https://apps.apple.com/us/app/naijaradar/id6765602140" }
+    ],
     "image": "radar.png",
     "status": "active",
     "tags": ["flutter", "nextjs"]
@@ -24,10 +37,10 @@
   {
     "name": "just being social",
     "description": "AI powered event management platform, offering tools for seamless organization and tracking.",
-    "website_url": "https://justbesocial.xyz",
-    "github_url": null,
-    "playstore_url": null,
-    "appstore_url": "https://apps.apple.com/ng/app/jbs-scanner/id6756948422",
+    "links": [
+      { "title": "Website", "url": "https://justbesocial.xyz" },
+      { "title": "App Store", "url": "https://apps.apple.com/ng/app/jbs-scanner/id6756948422" }
+    ],
     "image": "unikoin.png",
     "status": "active",
     "tags": ["c#", "asp.net", "flutter"]
@@ -35,10 +48,9 @@
   {
     "name": "resumecraft",
     "description": "AI Powered Resume Builder",
-    "website_url": null,
-    "github_url": null,
-    "playstore_url": "https://play.google.com/store/apps/details?id=com.resumecraft.app",
-    "appstore_url": null,
+    "links": [
+      { "title": "Play Store", "url": "https://play.google.com/store/apps/details?id=com.resumecraft.app" }
+    ],
     "image": "resumecraft.png",
     "status": "active",
     "tags": ["flutter"]
@@ -46,10 +58,9 @@
   {
     "name": "translag",
     "description": "Real-time Translation for African Languages.",
-    "website_url": "https://translag.vercel.app",
-    "github_url": null,
-    "playstore_url": null,
-    "appstore_url": null,
+    "links": [
+      { "title": "Website", "url": "https://translag.vercel.app" }
+    ],
     "image": "translag.png",
     "status": "active",
     "tags": ["flutter", "c#", "asp.net"]
@@ -57,10 +68,9 @@
   {
     "name": "buyenergy",
     "description": "Utility Payments & Renewable Energy Mobile App",
-    "website_url": "https://buyenergyunits.com",
-    "github_url": null,
-    "playstore_url": null,
-    "appstore_url": null,
+    "links": [
+      { "title": "Website", "url": "https://buyenergyunits.com" }
+    ],
     "image": "buyenergy.png",
     "status": "active",
     "tags": ["flutter", "laravel"]
@@ -68,10 +78,10 @@
   {
     "name": "mite",
     "description": "CLI file reader that allows you to search for a specific word within a file and prints the line containing that word.",
-    "website_url": "https://crates.io/crates/mite",
-    "github_url": "https://github.com/THEJOHNCALEB/mite",
-    "playstore_url": null,
-    "appstore_url": null,
+    "links": [
+      { "title": "Website", "url": "https://crates.io/crates/mite" },
+      { "title": "GitHub", "url": "https://github.com/THEJOHNCALEB/mite" }
+    ],
     "image": "mite.png",
     "status": "active",
     "tags": ["rust"]
@@ -79,10 +89,10 @@
   {
     "name": "tasuku",
     "description": "A Flutter app designed to help users organize and track their daily tasks with ease.",
-    "website_url": "https://appetize.io/app/b_uwlyjtsiyrlyhhsimlhts5ywdu",
-    "github_url": "https://github.com/THEJOHNCALEB/smart_toolkit",
-    "playstore_url": null,
-    "appstore_url": null,
+    "links": [
+      { "title": "Website", "url": "https://appetize.io/app/b_uwlyjtsiyrlyhhsimlhts5ywdu" },
+      { "title": "GitHub", "url": "https://github.com/THEJOHNCALEB/smart_toolkit" }
+    ],
     "image": "tasuku.png",
     "status": "active",
     "tags": ["flutter"]
@@ -90,10 +100,9 @@
   {
     "name": "supply chain",
     "description": "A solution for regulating and optimizing supply chain processes in e-commerce businesses.",
-    "website_url": null,
-    "github_url": "https://github.com/THEJOHNCALEB/SupplyChain",
-    "playstore_url": null,
-    "appstore_url": null,
+    "links": [
+      { "title": "GitHub", "url": "https://github.com/THEJOHNCALEB/SupplyChain" }
+    ],
     "image": "supply.png",
     "status": "active",
     "tags": ["asp.net", "c# asp.net"]
@@ -101,10 +110,10 @@
   {
     "name": "moviely",
     "description": "Get informations about a movie, search for a movie, view high rated, trending and most popular movies.",
-    "website_url": "https://moviely.netlify.app",
-    "github_url": "https://github.com/THEJOHNCALEB/Moviely",
-    "playstore_url": null,
-    "appstore_url": null,
+    "links": [
+      { "title": "Website", "url": "https://moviely.netlify.app" },
+      { "title": "GitHub", "url": "https://github.com/THEJOHNCALEB/Moviely" }
+    ],
     "image": "moviely.png",
     "status": "active",
     "tags": ["javascript"]
