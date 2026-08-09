@@ -18,17 +18,17 @@ const url = project.links[0]?.url ?? "";
 </style>
 
 <div class="space-y-1">
-  <div class="flex items-center gap-x-2.5">
+  <div class="flex items-center justify-between gap-x-4">
     <a href={url} class="text-primary-text-light dark:text-primary-text-dark text-lg font-medium no-underline">
       {project.name}
       {project.status != "active" ? <sup class="text-sm font-light opacity-60">({project.status})</sup> : null}
     </a>
+
+    <div class="text-xs space-x-3 shrink-0">
+      {project.links.map((link) => (
+        <a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a>
+      ))}
+    </div>
   </div>
   <p class="text-sm text-primary-text-light/60 dark:text-primary-text-dark/60 leading-7 tracking-normal">{project.description}</p>
-
-  <div class="text-xs space-x-3">
-    {project.links.map((link) => (
-      <a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a>
-    ))}
-  </div>
 </div>
