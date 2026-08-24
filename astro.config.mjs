@@ -23,7 +23,7 @@ export default defineConfig({
     "/cv": {
       status: 302,
       destination:
-        "https://drive.google.com/file/d/1i-tXJGW5Sp4w28y5QKlxz6x3jLsuppbQ/view",
+        "https://drive.google.com/file/d/1uBOHYl83a4KrInTAt3jjN7DfUbbZ6NqQ/view",
     },
   },
 });
