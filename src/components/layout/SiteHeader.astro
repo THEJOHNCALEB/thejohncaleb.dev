@@ -1,32 +1,16 @@
 ---
-import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
 ---
 
 <div class="flex items-center gap-4 my-6">
-  <Image src="https://github.com/THEJOHNCALEB.png" alt="My Avatar" class="w-24 lg:w-28 aspect-square rounded" width={98} height={98} />
-
-  <div class="space-y-1.5 lg:space-y-2.5 -mt-1">
-    <h1 class="text-3xl lg:text-4xl font-bold m-0">John C.</h1>
+  <div class="space-y-1.5 lg:space-y-2.5">
+    <h1 class="text-3xl lg:text-4xl font-bold m-0">John Caleb</h1>
 
     <a href="mailto:hey@thejohncaleb.com" class="text-sm inline-block no-underline">hey@thejohncaleb.com</a>
 
-    <div class="flex gap-2.5 text-xl">
-      <a href="https://github.com/thejohncaleb" title="GitHub" target="_blank">
-        <Icon name="tabler:brand-github" />
-      </a>
-
-      <a href="https://x.com/thejohncaleb" title="Twitter" target="_blank">
-        <Icon name="tabler:brand-twitter" />
-      </a>
-
-      <a href="https://linkedin.com/in/thejohncaleb" title="Linkedin" target="_blank">
-        <Icon name="tabler:brand-linkedin" />
-      </a>
-
-      <a href="https://www.baeldung.com/author/johncaleb" title="Blog" target="_blank">
-        <Icon name="tabler:pencil-code" />
-      </a>
+    <div class="flex gap-4 text-sm">
+      <a href="https://github.com/thejohncaleb" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://x.com/thejohncaleb" target="_blank" rel="noopener noreferrer">X</a>
+      <a href="https://linkedin.com/in/thejohncaleb" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </div>
 </div>

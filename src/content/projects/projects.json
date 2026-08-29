@@ -35,27 +35,6 @@
     "tags": ["flutter", "nextjs"]
   },
   {
-    "name": "just being social",
-    "description": "AI powered event management platform, offering tools for seamless organization and tracking.",
-    "links": [
-      { "title": "Website", "url": "https://justbesocial.xyz" },
-      { "title": "App Store", "url": "https://apps.apple.com/ng/app/jbs-scanner/id6756948422" }
-    ],
-    "image": "unikoin.png",
-    "status": "active",
-    "tags": ["c#", "asp.net", "flutter"]
-  },
-  {
-    "name": "resumecraft",
-    "description": "AI Powered Resume Builder",
-    "links": [
-      { "title": "Play Store", "url": "https://play.google.com/store/apps/details?id=com.resumecraft.app" }
-    ],
-    "image": "resumecraft.png",
-    "status": "active",
-    "tags": ["flutter"]
-  },
-  {
     "name": "translag",
     "description": "Real-time Translation for African Languages.",
     "links": [
@@ -87,17 +66,6 @@
     "tags": ["rust"]
   },
   {
-    "name": "tasuku",
-    "description": "A Flutter app designed to help users organize and track their daily tasks with ease.",
-    "links": [
-      { "title": "Website", "url": "https://appetize.io/app/b_uwlyjtsiyrlyhhsimlhts5ywdu" },
-      { "title": "GitHub", "url": "https://github.com/THEJOHNCALEB/smart_toolkit" }
-    ],
-    "image": "tasuku.png",
-    "status": "active",
-    "tags": ["flutter"]
-  },
-  {
     "name": "supply chain",
     "description": "A solution for regulating and optimizing supply chain processes in e-commerce businesses.",
     "links": [
@@ -106,16 +74,5 @@
     "image": "supply.png",
     "status": "active",
     "tags": ["asp.net", "c# asp.net"]
-  },
-  {
-    "name": "moviely",
-    "description": "Get informations about a movie, search for a movie, view high rated, trending and most popular movies.",
-    "links": [
-      { "title": "Website", "url": "https://moviely.netlify.app" },
-      { "title": "GitHub", "url": "https://github.com/THEJOHNCALEB/Moviely" }
-    ],
-    "image": "moviely.png",
-    "status": "active",
-    "tags": ["javascript"]
   }
 ]
