@@ -1,0 +1,498 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const SELAR_URL = "https://selar.com";
+const WHATSAPP_URL = "https://wa.me/2348137604475";
+
+const PRICE_EARLY = "₦30,000";
+const PRICE_REGULAR = "₦40,000";
+const EARLY_BIRD_ENDS = "25th Oct";
+const START_DATE = "Sunday, 1st Nov 2026";
+const SCHEDULE_DAYS = "Sunday, Tuesday & Thursday";
+const SCHEDULE_TIME = "7:00 PM WAT";
+
+const INSTRUCTOR_PHOTO = "https://github.com/thejohncaleb.png";
+
+const buttonClass =
+  "group inline-flex w-full items-center justify-center gap-2.5 rounded-md bg-primary-text-light text-primary-text-dark px-7 py-4 text-base font-bold no-underline ring-1 ring-primary-400/40 shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 dark:bg-primary-text-dark dark:text-primary-text-light dark:ring-primary-600/40 dark:shadow-none dark:hover:shadow-none";
+
+const outlineButtonClass =
+  "group inline-flex w-full items-center justify-center gap-2.5 rounded-md border border-secondary-300 dark:border-secondary-700 bg-transparent px-7 py-4 text-base font-semibold text-primary-text-light dark:text-primary-text-dark no-underline transition-colors duration-200 hover:border-primary-400 hover:text-primary-600 dark:hover:border-primary-500 dark:hover:text-primary-300";
+
+const waButtonClass =
+  "group inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] text-[#0b141a] px-7 py-3 text-sm font-semibold no-underline ring-1 ring-black/10 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1ebe57] hover:shadow-md active:translate-y-0 dark:bg-[#128C7E] dark:text-white dark:ring-white/20 dark:shadow-none dark:hover:bg-[#0f7568] dark:hover:text-white dark:hover:shadow-none";
+
+const benefits = [
+  {
+    icon: "tabler:device-desktop",
+    title: "Live, hands-on sessions",
+    desc: "Build real AI projects as you learn, with direct feedback in every class.",
+  },
+  {
+    icon: "tabler:rocket",
+    title: "Launch your own app, game, website and AI agent",
+    desc: "You don't just learn the theory — you ship real, working projects.",
+  },
+  {
+    icon: "tabler:school",
+    title: "Beginner-friendly",
+    desc: "No prior coding experience needed. We start from the very foundations.",
+  },
+  {
+    icon: "tabler:certificate",
+    title: "Certificate + community access",
+    desc: "Get a certificate on completion and lifetime access to a private WhatsApp group.",
+  },
+];
+
+const outline = [
+  {
+    week: 1,
+    title: "AI foundations",
+    points: [
+      "How AI tools work",
+      "Writing prompts that get results",
+      "Setting up your tools and workspace",
+      "Building your first mini project",
+    ],
+  },
+  {
+    week: 2,
+    title: "Websites & apps",
+    points: [
+      "Turn an idea into a working website",
+      "Build a simple app with AI",
+      "Connect forms, data and basic features",
+      "Deploy it live",
+    ],
+  },
+  {
+    week: 3,
+    title: "Games",
+    points: [
+      "Plan a simple game with AI",
+      "Build and test gameplay",
+      "Add visuals, scoring and levels",
+      "Publish and share it",
+    ],
+  },
+  {
+    week: 4,
+    title: "AI agents & final project",
+    points: [
+      "Build an AI agent that performs tasks",
+      "Connect it to tools",
+      "Finish and present your own final project",
+      "Get next steps and a certificate",
+    ],
+  },
+];
+
+const classDetails = [
+  { label: "Starts", value: START_DATE },
+  { label: "Format", value: "Live online on Google Meet" },
+  { label: "Schedule", value: "3 sessions a week" },
+  { label: "Session length", value: "1 hour 30 minutes" },
+  { label: "Duration", value: "4 weeks (12 sessions)" },
+  { label: "Meeting link", value: "Shared in the WhatsApp group after payment" },
+];
+
+const steps = [
+  {
+    title: "Pay securely on Selar",
+    desc: "Hit any Register button to pay in a few clicks.",
+  },
+  {
+    title: "Get your WhatsApp group invite",
+    desc: "You'll receive an invite to the private class group.",
+  },
+  {
+    title: "Join the first class",
+    desc: `We start on ${START_DATE}. Come ready to build.`,
+  },
+];
+
+const faqs = [
+  {
+    q: "Do I need coding experience?",
+    a: "No, the class is beginner-friendly and we start from the foundations.",
+  },
+  {
+    q: "Is it live or recorded?",
+    a: `It's live on Google Meet, with 3 sessions a week (${SCHEDULE_DAYS}) at ${SCHEDULE_TIME}.`,
+  },
+  {
+    q: "What do I need to join?",
+    a: "A laptop (preferred), a stable internet connection and a free Google account.",
+  },
+  {
+    q: "How do I join the class?",
+    a: "Pay on Selar, then you'll receive the WhatsApp group invite with the Google Meet details.",
+  },
+  {
+    q: "Will I get a certificate?",
+    a: "Yes, you'll get a certificate on completing the class.",
+  },
+  {
+    q: "What if I miss a session?",
+    a: "Recordings are shared in the WhatsApp group, and you can ask questions there anytime.",
+  },
+  {
+    q: "Can I get a refund?",
+    a: "Yes — see the refund policy below.",
+  },
+];
+---
+
+<Layout
+  title="The AI Builder's Masterclass — John Caleb"
+  desc="Learn by building. A 4-week live masterclass where you build real projects — websites, apps, games and AI agents. Only 30 seats. ₦30K early bird until 25th Oct."
+  metaImage="https://thejohncaleb.com/og/ai.png"
+  keywords="ai masterclass, learn ai, ai course, build ai agents, ai class, john caleb, justbesocial"
+>
+  <main class="container pt-10 pb-28 lg:pb-10">
+    <section id="hero">
+      <span class="tag w-max">AI Masterclass &middot; Cohort 1</span>
+
+      <h2 class="text-4xl md:text-5xl font-extrabold mt-4 leading-[1.12] tracking-tight">
+        The AI Builder's Masterclass
+      </h2>
+
+      <p class="mt-4 text-base text-primary-text-light/70 dark:text-primary-text-dark/70">
+        Learn by building. Leave with real projects you can show.
+      </p>
+
+      <div class="mt-5 flex flex-wrap items-center gap-2">
+        <span class="tag">{PRICE_EARLY} Early Bird &middot; ends {EARLY_BIRD_ENDS}</span>
+        <span class="w-max rounded-sm border border-secondary-200 dark:border-secondary-800 px-2 py-0.5 text-xs text-secondary-outline">
+          Limited to 30 seats
+        </span>
+      </div>
+
+      <div class="mt-6 flex flex-col gap-3">
+        <a href={SELAR_URL} target="_blank" rel="noopener noreferrer" class={buttonClass}>
+          Register Now
+          <Icon
+            name="tabler:arrow-right"
+            class="text-xl transition-transform duration-200 group-hover:translate-x-1"
+          />
+        </a>
+        <a href="#outline" class={outlineButtonClass}>
+          View Course Outline
+          <Icon name="tabler:list" class="text-xl" />
+        </a>
+      </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="benefits">
+      <h3 class="text-2xl font-bold mb-5">What you'll get</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {
+          benefits.map((item) => (
+            <div class="rounded-lg border border-secondary-100 dark:border-secondary-800 p-5 space-y-2.5">
+              <Icon name={item.icon} class="text-primary-500 dark:text-primary-300 text-2xl" />
+              <p class="font-semibold leading-snug">{item.title}</p>
+              <p class="text-sm text-primary-text-light/60 dark:text-primary-text-dark/60">{item.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="outline">
+      <h3 class="text-2xl font-bold mb-1.5">Course outline</h3>
+      <p class="text-sm text-secondary-outline mb-5">4 weeks &middot; 3 sessions a week &middot; 12 sessions in total</p>
+
+      <div class="space-y-4">
+        {
+          outline.map((week) => (
+            <div class="rounded-lg border border-secondary-100 dark:border-secondary-800 p-5">
+              <div class="flex items-center gap-3">
+                <span class="tag">Week {week.week}</span>
+                <h4 class="text-lg font-semibold">{week.title}</h4>
+              </div>
+              <ul class="mt-3.5 space-y-2">
+                {week.points.map((point) => (
+                  <li class="flex items-start gap-2.5 text-sm">
+                    <Icon name="tabler:check" class="text-primary-500 dark:text-primary-300 text-base mt-0.5 shrink-0" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="details">
+      <h3 class="text-2xl font-bold mb-5">Class details</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-secondary-100 dark:bg-secondary-800 rounded-lg overflow-hidden border border-secondary-100 dark:border-secondary-800">
+        {
+          classDetails.map((detail) => (
+            <div class="bg-secondary-light dark:bg-secondary-dark p-4">
+              <p class="text-xs uppercase tracking-wide text-secondary-outline">{detail.label}</p>
+              <p class="mt-1 font-medium">{detail.value}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="audience">
+      <h3 class="text-2xl font-bold mb-5">Who it's for</h3>
+      <p class="text-primary-text-light/70 dark:text-primary-text-dark/70">
+        Students, creators, freelancers, entrepreneurs and anyone who wants to build with AI. No
+        coding experience needed.
+      </p>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="pricing">
+      <h3 class="text-2xl font-bold mb-5">Pricing</h3>
+      <div class="rounded-xl bg-primary-50 dark:bg-secondary-900 border border-primary-200 dark:border-secondary-800 p-6">
+        <div class="flex items-baseline gap-3 flex-wrap">
+          <span class="text-4xl font-extrabold">{PRICE_EARLY}</span>
+          <span class="tag">Early Bird</span>
+        </div>
+        <p class="mt-2 text-sm text-primary-text-light/70 dark:text-primary-text-dark/70">
+          until {EARLY_BIRD_ENDS}. After that, <span class="line-through">{PRICE_REGULAR}</span>.
+        </p>
+
+        <p class="mt-3 flex items-center gap-2 text-sm">
+          <Icon name="tabler:users" class="text-primary-500 dark:text-primary-300 text-lg" />
+          Limited to 30 seats
+        </p>
+
+        <a href={SELAR_URL} target="_blank" rel="noopener noreferrer" class={`${buttonClass} mt-5`}>
+          Register Now
+          <Icon name="tabler:arrow-right" class="text-xl transition-transform duration-200 group-hover:translate-x-1" />
+        </a>
+
+        <p class="mt-3 text-center text-xs text-secondary-outline">
+          After payment you'll receive an invite to the class WhatsApp group.
+        </p>
+      </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="how">
+      <h3 class="text-2xl font-bold mb-5">How it works</h3>
+      <ol class="space-y-4">
+        {
+          steps.map((step, i) => (
+            <li class="flex items-start gap-4">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-400 text-primary-text-light text-sm font-bold">
+                {i + 1}
+              </span>
+              <div class="space-y-0.5">
+                <p class="font-semibold">{step.title}</p>
+                <p class="text-sm text-primary-text-light/60 dark:text-primary-text-dark/60">{step.desc}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="instructor">
+      <h3 class="text-2xl font-bold mb-5">About the instructor</h3>
+      <div class="flex flex-col sm:flex-row gap-5 items-start">
+        <img
+          src={INSTRUCTOR_PHOTO}
+          alt="John Caleb"
+          width="112"
+          height="112"
+          loading="lazy"
+          class="h-28 w-28 rounded-lg object-cover shrink-0 border border-secondary-100 dark:border-secondary-800"
+        />
+        <div class="space-y-2">
+          <p class="font-semibold">
+            John Caleb
+            <span class="block sm:inline text-sm font-normal text-secondary-outline">
+              — Senior Software Engineer &amp; CTO, Naijaradar
+            </span>
+          </p>
+          <p class="text-sm text-primary-text-light/70 dark:text-primary-text-dark/70">
+            John is a Senior Software Engineer and the CTO of Naijaradar, where he leads engineering
+            on AI-powered products. He has shipped software for startups and teams across the US and
+            UK, and now helps other people learn to build real things with AI.
+          </p>
+          <div class="flex gap-4 text-sm pt-1">
+            <a href="https://x.com/thejohncaleb" target="_blank" rel="noopener noreferrer">X</a>
+            <a href="https://github.com/thejohncaleb" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/thejohncaleb" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="refund">
+      <h3 class="text-2xl font-bold mb-5">Refund policy</h3>
+      <p class="text-sm text-primary-text-light/70 dark:text-primary-text-dark/70">
+        Refunds are available. Request a full refund before the second session by messaging us on
+        WhatsApp — just DM us and we'll sort it out, no hassle.
+      </p>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="faq">
+      <h3 class="text-2xl font-bold mb-5">FAQ</h3>
+      <div class="space-y-3">
+        {
+          faqs.map((faq) => (
+            <details class="group rounded-lg border border-secondary-100 dark:border-secondary-800 p-4 open:bg-secondary-50 dark:open:bg-secondary-900/50 transition-colors">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-medium [&::-webkit-details-marker]:hidden">
+                {faq.q}
+                <Icon
+                  name="tabler:chevron-down"
+                  class="text-lg text-secondary-outline transition-transform duration-200 group-open:rotate-180 shrink-0"
+                />
+              </summary>
+              <p class="mt-3 text-sm text-primary-text-light/70 dark:text-primary-text-dark/70">{faq.a}</p>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="register">
+      <div class="rounded-xl bg-primary-50 dark:bg-secondary-900 border border-primary-200 dark:border-secondary-800 p-6 text-center">
+        <h3 class="text-xl font-semibold">Ready to build with AI?</h3>
+        <p class="mt-2 text-sm text-primary-text-light/70 dark:text-primary-text-dark/70">
+          Limited to 30 seats. Register now to secure your spot.
+        </p>
+        <a href={SELAR_URL} target="_blank" rel="noopener noreferrer" class={`${buttonClass} mt-5`}>
+          Register Now
+          <Icon name="tabler:arrow-right" class="text-xl transition-transform duration-200 group-hover:translate-x-1" />
+        </a>
+        <p class="mt-4 text-xs text-secondary-outline">Have a question?</p>
+        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class={`${waButtonClass} mt-2`}>
+          <Icon name="tabler:brand-whatsapp" class="text-lg" />
+          DM the instructor
+        </a>
+      </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="countdown">
+      <div class="rounded-2xl border border-primary-200 dark:border-secondary-800 bg-primary-50 dark:bg-secondary-900 p-6 sm:p-8 text-center">
+        <p class="text-xs uppercase tracking-[0.25em] text-secondary-outline">Class starts in</p>
+
+        <div class="mt-6 grid grid-cols-4 gap-2.5 sm:gap-4 max-w-md mx-auto">
+          {
+            [
+              { id: "cd-days", label: "Days" },
+              { id: "cd-hours", label: "Hours" },
+              { id: "cd-mins", label: "Mins" },
+              { id: "cd-secs", label: "Secs" },
+            ].map((unit) => (
+              <div class="rounded-xl bg-secondary-dark dark:bg-secondary-950 border border-secondary-800 py-3 sm:py-4 shadow-sm">
+                <div id={unit.id} class="text-3xl sm:text-4xl font-extrabold tabular-nums text-primary-400">
+                  00
+                </div>
+                <div class="mt-1.5 text-[0.65rem] uppercase tracking-widest text-secondary-300 dark:text-secondary-400">
+                  {unit.label}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <p class="mt-6 text-sm text-primary-text-light/70 dark:text-primary-text-dark/70">
+          Live sessions begin <span class="font-semibold">{START_DATE}</span>.
+        </p>
+
+        <a
+          href={SELAR_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class={`${buttonClass} mt-5 sm:max-w-xs sm:mx-auto`}
+        >
+          Register Now
+          <Icon
+            name="tabler:arrow-right"
+            class="text-xl transition-transform duration-200 group-hover:translate-x-1"
+          />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <a
+    href={WHATSAPP_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with the instructor on WhatsApp"
+    title="Chat with the instructor on WhatsApp"
+    class="fixed bottom-20 lg:bottom-6 right-4 lg:right-6 z-50 flex h-14 w-14 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-[#25D366] text-white no-underline shadow-2xl ring-2 ring-white/40 transition-transform duration-200 hover:scale-105 active:scale-95 dark:bg-[#128C7E] dark:ring-white/25"
+  >
+    <Icon name="tabler:brand-whatsapp" class="text-3xl lg:text-2xl" />
+  </a>
+
+  <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-secondary-100 dark:border-secondary-800 bg-secondary-light/95 dark:bg-secondary-dark/95 backdrop-blur p-3">
+    <a
+      href={SELAR_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class={buttonClass}
+    >
+      Register Now
+      <Icon name="tabler:arrow-right" class="text-xl transition-transform duration-200 group-hover:translate-x-1" />
+    </a>
+  </div>
+
+  <style is:global>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var target = new Date("2026-11-01T00:00:00+01:00").getTime();
+      var els = {
+        d: document.getElementById("cd-days"),
+        h: document.getElementById("cd-hours"),
+        m: document.getElementById("cd-mins"),
+        s: document.getElementById("cd-secs"),
+      };
+      if (!els.d || !els.h || !els.m || !els.s) return;
+
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+
+      function tick() {
+        var diff = target - Date.now();
+        if (diff < 0) diff = 0;
+        els.d.textContent = pad(Math.floor(diff / 86400000));
+        els.h.textContent = pad(Math.floor((diff % 86400000) / 3600000));
+        els.m.textContent = pad(Math.floor((diff % 3600000) / 60000));
+        els.s.textContent = pad(Math.floor((diff % 60000) / 1000));
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</Layout>
