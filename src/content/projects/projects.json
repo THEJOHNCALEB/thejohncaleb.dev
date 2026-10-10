@@ -1,5 +1,15 @@
 [
   {
+    "name": "Paldey",
+    "description": "AI Scholarship Agent - Finds and applies to scholarships for you.",
+    "links": [
+      { "title": "paldey.com", "url": "https://paldey.com/" }
+    ],
+    "image": "paldey.png",
+    "status": "wip",
+    "tags": ["startup", "AI Agent"]
+  },
+  {
     "name": "ResQ",
     "description": "AI Offline Emergency Companion",
     "links": [
