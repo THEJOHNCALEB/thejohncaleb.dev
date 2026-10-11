@@ -12,9 +12,10 @@ export interface Props {
   metaImage?: string;
   pubDate?: Date;
   tags?: string[];
+  hideNav?: boolean;
 }
 
-let { title, desc, metaImage, keywords, tags = [], pubDate = null } = Astro.props;
+let { title, desc, metaImage, keywords, tags = [], pubDate = null, hideNav = false } = Astro.props;
 if (!title) title = "John Caleb";
 if (!desc) desc = "I build cool stuff";
 if (!metaImage) metaImage = "https://thejohncaleb.vercel.app/images/meta.jpg";
@@ -80,7 +81,7 @@ if (!keywords) keywords = "john, thejohncaleb, caleb, express, c#, typescript, j
     <title>{title}</title>
   </head>
   <body class="flex flex-col min-h-screen">
-    <NavBar />
+    {!hideNav && <NavBar />}
     <div class="flex-1">
       <slot />
     </div>
