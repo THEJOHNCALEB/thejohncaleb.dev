@@ -27,7 +27,7 @@ export const GET: APIRoute = async () => {
     <span style="display: flex; margin-top: 26px; font-size: 28px; color: #b6aeaa; max-width: 900px;">Learn by building. Leave with real projects you can show.</span>
   </div>
   <div style="display: flex; gap: 16px; align-items: center;">
-    <div style="display: flex; padding: 12px 24px; background-color: #e4af5d; color: #1b1a18; font-size: 22px; font-weight: 700; border-radius: 8px;"><span style="display: flex;">NGN 30K Early Bird · ends 25th Oct</span></div>
+    <div style="display: flex; padding: 12px 24px; background-color: #e4af5d; color: #1b1a18; font-size: 22px; font-weight: 700; border-radius: 8px;"><span style="display: flex;">NGN 30K Early Bird</span></div>
     <div style="display: flex; padding: 12px 24px; border: 2px solid #91867f; color: #faf1da; font-size: 22px; border-radius: 8px;"><span style="display: flex;">Limited to 30 seats</span></div>
   </div>
 </div>`;

@@ -7,10 +7,7 @@ const WHATSAPP_URL = "https://wa.me/2348137604475";
 
 const PRICE_EARLY = "₦30,000";
 const PRICE_REGULAR = "₦50,000";
-const EARLY_BIRD_ENDS = "25th Oct";
 const START_DATE = "Sunday, 1st Nov 2026";
-const SCHEDULE_DAYS = "Sunday, Tuesday & Thursday";
-const SCHEDULE_TIME = "7:00 PM WAT";
 
 const INSTRUCTOR_PHOTO = "https://github.com/thejohncaleb.png";
 
@@ -51,7 +48,7 @@ const benefits = [
   {
     icon: "tabler:certificate",
     title: "Certificate + community access",
-    desc: "Get a certificate on completion and lifetime access to a private WhatsApp group.",
+    desc: "Get a certificate on completion and lifetime access to a private WhatsApp community.",
   },
 ];
 
@@ -104,7 +101,7 @@ const classDetails = [
   { label: "Schedule", value: "2 sessions a week" },
   { label: "Session length", value: "1 hour 30 minutes" },
   { label: "Duration", value: "4 weeks (8 sessions)" },
-  { label: "Meeting link", value: "Shared in the WhatsApp group after payment" },
+  { label: "Meeting link", value: "Shared in the private WhatsApp community after payment" },
 ];
 
 const steps = [
@@ -113,7 +110,7 @@ const steps = [
     desc: "Hit any Register button to pay in a few clicks.",
   },
   {
-    title: "Get your WhatsApp group invite",
+    title: "Get your private WhatsApp community invite",
     desc: "You'll receive an invite to the private class group.",
   },
   {
@@ -129,7 +126,7 @@ const faqs = [
   },
   {
     q: "Is it live or recorded?",
-    a: `It's live on Google Meet, with 2 sessions a week (${SCHEDULE_DAYS}) at ${SCHEDULE_TIME}.`,
+    a: "It's live on Google Meet, with 2 sessions a week. The exact days and time are shared in the private WhatsApp community.",
   },
   {
     q: "What do I need to join?",
@@ -137,7 +134,7 @@ const faqs = [
   },
   {
     q: "How do I join the class?",
-    a: "Pay on Selar, then you'll receive the WhatsApp group invite with the Google Meet details.",
+    a: "Pay on Selar, then you'll receive the private WhatsApp community invite with the Google Meet details.",
   },
   {
     q: "Will I get a certificate?",
@@ -145,7 +142,7 @@ const faqs = [
   },
   {
     q: "What if I miss a session?",
-    a: "Recordings are shared in the WhatsApp group, and you can ask questions there anytime.",
+    a: "Recordings are shared in the private WhatsApp community, and you can ask questions there anytime.",
   },
   {
     q: "Can I get a refund?",
@@ -156,7 +153,7 @@ const faqs = [
 
 <Layout
   title="The AI Builder's Masterclass — John Caleb"
-  desc="Learn by building. A 4-week live masterclass where you build real projects — websites, apps, games and AI agents. Only 30 seats. ₦30K early bird until 25th Oct."
+  desc="Learn by building. A 4-week live masterclass where you build real projects — websites, apps, games and AI agents. Only 30 seats. ₦30K early bird."
   metaImage="https://thejohncaleb.com/og/ai.png"
   keywords="ai masterclass, learn ai, ai course, build ai agents, ai class, john caleb, justbesocial"
   hideNav
@@ -218,7 +215,7 @@ const faqs = [
       </p>
 
       <div class="mt-5 flex flex-wrap items-center gap-2">
-        <span class="tag">{PRICE_EARLY} Early Bird &middot; ends {EARLY_BIRD_ENDS}</span>
+        <span class="tag">{PRICE_EARLY} Early Bird</span>
         <span class="w-max rounded-sm border border-secondary-200 dark:border-secondary-800 px-2 py-0.5 text-xs text-secondary-outline">
           Limited to 30 seats
         </span>
@@ -354,7 +351,7 @@ const faqs = [
           <span class="tag">Early Bird</span>
         </div>
         <p class="mt-2 text-sm text-primary-text-light/70 dark:text-primary-text-dark/70">
-          until {EARLY_BIRD_ENDS}. After that, <span class="line-through">{PRICE_REGULAR}</span>.
+          Early bird price. Regular price <span class="line-through">{PRICE_REGULAR}</span>.
         </p>
 
         <p class="mt-3 flex items-center gap-2 text-sm">
@@ -368,7 +365,7 @@ const faqs = [
         </a>
 
         <p class="mt-3 text-center text-xs text-secondary-outline">
-          After payment you'll receive an invite to the class WhatsApp group.
+          After payment you'll receive an invite to the class's private WhatsApp community.
         </p>
       </div>
     </section>
