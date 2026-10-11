@@ -15,13 +15,11 @@ const SCHEDULE_TIME = "7:00 PM WAT";
 const INSTRUCTOR_PHOTO = "https://github.com/thejohncaleb.png";
 
 const navItems = [
-  { label: "What you'll get", href: "#benefits" },
-  { label: "Outline", href: "#outline" },
+  { label: "Course outline", href: "#outline" },
   { label: "Instructor", href: "#instructor" },
   { label: "Details", href: "#details" },
   { label: "Who it's for", href: "#audience" },
   { label: "Pricing", href: "#pricing" },
-  { label: "How it works", href: "#how" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -164,16 +162,16 @@ const faqs = [
   hideNav
 >
   <nav
-    class="sticky top-0 z-40 w-full border-b border-secondary-100 bg-secondary-light/90 backdrop-blur dark:border-secondary-900 dark:bg-secondary-dark/90"
+    class="w-full border-b border-secondary-100 bg-secondary-light dark:border-secondary-900 dark:bg-secondary-dark"
     x-data
   >
-    <div class="md:container flex items-center justify-between space-x-5 py-4 px-8">
-      <div class="flex flex-wrap items-center text-sm md:text-base gap-x-5 gap-y-2 md:gap-x-6">
+    <div class="md:container flex items-center justify-between space-x-5 py-5 px-8">
+      <div class="flex flex-wrap items-center text-sm md:text-base gap-x-7 gap-y-3 md:gap-x-9">
         {
           navItems.map((item) => (
             <a
               href={item.href}
-              class="transition-colors hover:text-primary-500 dark:hover:text-primary-300"
+              class="underline decoration-secondary-300 underline-offset-4 transition-colors hover:text-primary-500 hover:decoration-primary-400 dark:decoration-secondary-700 dark:hover:text-primary-300"
             >
               {item.label}
             </a>
@@ -183,7 +181,7 @@ const faqs = [
           href={SELAR_URL}
           target="_blank"
           rel="noopener noreferrer"
-          class="transition-colors hover:text-primary-500 dark:hover:text-primary-300"
+          class="underline decoration-secondary-300 underline-offset-4 transition-colors hover:text-primary-500 hover:decoration-primary-400 dark:decoration-secondary-700 dark:hover:text-primary-300"
         >
           Register
         </a>
@@ -522,7 +520,7 @@ const faqs = [
     }
 
     [id] {
-      scroll-margin-top: 5rem;
+      scroll-margin-top: 1.5rem;
     }
   </style>
 
