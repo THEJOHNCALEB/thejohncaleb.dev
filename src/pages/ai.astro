@@ -17,9 +17,9 @@ const INSTRUCTOR_PHOTO = "https://github.com/thejohncaleb.png";
 const navItems = [
   { label: "What you'll get", href: "#benefits" },
   { label: "Outline", href: "#outline" },
+  { label: "Instructor", href: "#instructor" },
   { label: "Details", href: "#details" },
   { label: "Who it's for", href: "#audience" },
-  { label: "Instructor", href: "#instructor" },
   { label: "Pricing", href: "#pricing" },
   { label: "How it works", href: "#how" },
   { label: "FAQ", href: "#faq" },
@@ -164,50 +164,46 @@ const faqs = [
   hideNav
 >
   <nav
-    class="sticky top-0 z-40 border-b border-secondary-100 bg-secondary-light/90 backdrop-blur dark:border-secondary-800 dark:bg-secondary-dark/90"
+    class="sticky top-0 z-40 w-full border-b border-secondary-100 bg-secondary-light/90 backdrop-blur dark:border-secondary-900 dark:bg-secondary-dark/90"
+    x-data
   >
-    <div class="container flex items-center gap-4 py-3">
-      <a href="#hero" class="shrink-0 text-sm font-bold no-underline">AI Masterclass</a>
-
-      <div class="no-scrollbar flex items-center gap-5 overflow-x-auto whitespace-nowrap text-sm">
+    <div class="md:container flex items-center justify-between space-x-5 py-4 px-8">
+      <div class="flex flex-wrap items-center text-sm md:text-base gap-x-5 gap-y-2 md:gap-x-6">
         {
           navItems.map((item) => (
             <a
               href={item.href}
-              class="shrink-0 transition-colors hover:text-primary-500 dark:hover:text-primary-300"
+              class="transition-colors hover:text-primary-500 dark:hover:text-primary-300"
             >
               {item.label}
             </a>
           ))
         }
-      </div>
-
-      <div class="ml-auto flex shrink-0 items-center gap-3">
-        <button
-          x-cloak
-          class="flex h-8 aspect-square items-center justify-center rounded-full border border-secondary-600 transition-all duration-300 dark:border-0 dark:bg-secondary-200"
-          @click="$store.theme.mode === 'dark' ? $store.theme.enableLightMode() : $store.theme.enableDarkMode()"
-        >
-          <div class="sr-only">Change color scheme</div>
-
-          <template x-if="$store.theme.mode == 'light'">
-            <Icon name="octicon:moon-24" />
-          </template>
-
-          <template x-if="$store.theme.mode == 'dark'">
-            <Icon name="octicon:sun-24" />
-          </template>
-        </button>
-
         <a
           href={SELAR_URL}
           target="_blank"
           rel="noopener noreferrer"
-          class="hidden shrink-0 rounded-md bg-primary-text-light px-4 py-2 text-xs font-bold text-primary-text-dark no-underline transition-colors dark:bg-primary-text-dark dark:text-primary-text-light md:inline-flex"
+          class="transition-colors hover:text-primary-500 dark:hover:text-primary-300"
         >
           Register
         </a>
       </div>
+
+      <button
+        x-cloak
+        class="flex h-8 aspect-square shrink-0 items-center justify-center rounded-full border border-secondary-600 transition-all duration-300 dark:border-0 dark:bg-secondary-200"
+        @click="$store.theme.mode === 'dark' ? $store.theme.enableLightMode() : $store.theme.enableDarkMode()"
+      >
+        <div class="sr-only">Change color scheme</div>
+
+        <template x-if="$store.theme.mode == 'light'">
+          <Icon name="octicon:moon-24" />
+        </template>
+
+        <template x-if="$store.theme.mode == 'dark'">
+          <Icon name="octicon:sun-24" />
+        </template>
+      </button>
     </div>
   </nav>
 
@@ -292,32 +288,6 @@ const faqs = [
 
     <hr class="my-14" />
 
-    <section id="details">
-      <h3 class="text-2xl font-bold mb-5">Class details</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-secondary-100 dark:bg-secondary-800 rounded-lg overflow-hidden border border-secondary-100 dark:border-secondary-800">
-        {
-          classDetails.map((detail) => (
-            <div class="bg-secondary-light dark:bg-secondary-dark p-4">
-              <p class="text-xs uppercase tracking-wide text-secondary-outline">{detail.label}</p>
-              <p class="mt-1 font-medium">{detail.value}</p>
-            </div>
-          ))
-        }
-      </div>
-    </section>
-
-    <hr class="my-14" />
-
-    <section id="audience">
-      <h3 class="text-2xl font-bold mb-5">Who it's for</h3>
-      <p class="text-primary-text-light/70 dark:text-primary-text-dark/70">
-        Students, creators, freelancers, entrepreneurs and anyone who wants to build with AI. No
-        coding experience needed.
-      </p>
-    </section>
-
-    <hr class="my-14" />
-
     <section id="instructor">
       <h3 class="text-2xl font-bold mb-5">About the instructor</h3>
       <div class="flex flex-col sm:flex-row gap-5 items-start">
@@ -348,6 +318,32 @@ const faqs = [
           </div>
         </div>
       </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="details">
+      <h3 class="text-2xl font-bold mb-5">Class details</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-secondary-100 dark:bg-secondary-800 rounded-lg overflow-hidden border border-secondary-100 dark:border-secondary-800">
+        {
+          classDetails.map((detail) => (
+            <div class="bg-secondary-light dark:bg-secondary-dark p-4">
+              <p class="text-xs uppercase tracking-wide text-secondary-outline">{detail.label}</p>
+              <p class="mt-1 font-medium">{detail.value}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <hr class="my-14" />
+
+    <section id="audience">
+      <h3 class="text-2xl font-bold mb-5">Who it's for</h3>
+      <p class="text-primary-text-light/70 dark:text-primary-text-dark/70">
+        Students, creators, freelancers, entrepreneurs and anyone who wants to build with AI. No
+        coding experience needed.
+      </p>
     </section>
 
     <hr class="my-14" />
@@ -490,9 +486,9 @@ const faqs = [
     rel="noopener noreferrer"
     aria-label="Chat with the instructor on WhatsApp"
     title="Chat with the instructor on WhatsApp"
-    class="fixed bottom-24 lg:bottom-6 right-4 lg:right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#2bd968] to-[#149e4e] text-white no-underline shadow-[0_10px_30px_-4px_rgba(37,211,102,0.7)] ring-2 ring-white/60 transition-transform duration-200 hover:scale-110 active:scale-95 dark:ring-white/30"
+    class="fixed bottom-24 lg:bottom-6 right-4 lg:right-6 z-50 flex h-14 w-14 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-[#25D366] text-white no-underline shadow-lg transition-transform duration-200 hover:scale-105 active:scale-95 dark:bg-[#128C7E]"
   >
-    <Icon name="tabler:brand-whatsapp" class="text-3xl" />
+    <Icon name="tabler:brand-whatsapp" class="text-3xl lg:text-2xl" />
   </a>
 
   <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-secondary-100 dark:border-secondary-800 bg-secondary-light/95 dark:bg-secondary-dark/95 backdrop-blur p-3">
@@ -508,16 +504,16 @@ const faqs = [
   </div>
 
   <style is:global>
-    nav > div > div button [data-icon] {
+    nav button [data-icon] {
       color: theme("colors.secondary.600");
       font-size: 1rem;
     }
 
-    nav > div > div button [data-icon="octicon:moon-24"] {
+    nav button [data-icon="octicon:moon-24"] {
       @apply rotate-90;
     }
 
-    nav > div > div button [data-icon="octicon:sun-24"] {
+    nav button [data-icon="octicon:sun-24"] {
       color: theme("colors.secondary.900");
     }
 
@@ -527,15 +523,6 @@ const faqs = [
 
     [id] {
       scroll-margin-top: 5rem;
-    }
-
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
     }
   </style>
 
