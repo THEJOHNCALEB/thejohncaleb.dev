@@ -7,7 +7,7 @@ const WHATSAPP_URL = "https://wa.me/2348137604475";
 
 const PRICE_EARLY = "₦30,000";
 const PRICE_REGULAR = "₦50,000";
-const START_DATE = "Sunday, 1st Nov 2026";
+const START_DATE = "Monday, 9th Nov 2026";
 
 const INSTRUCTOR_PHOTO = "https://github.com/thejohncaleb.png";
 
@@ -50,6 +50,11 @@ const benefits = [
     title: "Certificate + community access",
     desc: "Get a certificate on completion and lifetime access to a private WhatsApp community.",
   },
+  {
+    icon: "tabler:briefcase",
+    title: "Career toolkit",
+    desc: "Use AI to improve your CV, cover letters, LinkedIn profile and interview prep.",
+  },
 ];
 
 const outline = [
@@ -85,10 +90,12 @@ const outline = [
   },
   {
     week: 4,
-    title: "AI agents & final project",
+    title: "AI agents, career toolkit & final project",
     points: [
       "Build an AI agent that performs tasks",
       "Connect it to tools",
+      "Use AI to tailor your CV and write strong cover letters",
+      "Optimize your LinkedIn profile and prepare for interviews with AI",
       "Finish and present your own final project",
       "Get next steps and a certificate",
     ],
@@ -126,7 +133,11 @@ const faqs = [
   },
   {
     q: "Is it live or recorded?",
-    a: "It's live on Google Meet, with 2 sessions a week. The exact days and time are shared in the private WhatsApp community.",
+    a: "It's live on Google Meet, with 2 sessions a week (Monday & Wednesday) at 7:00 PM WAT.",
+  },
+  {
+    q: "Will this help with job applications?",
+    a: "Yes. Week 4 covers using AI for your CV, cover letters, LinkedIn profile and interview preparation, and you'll finish with projects you can show employers.",
   },
   {
     q: "What do I need to join?",
@@ -153,7 +164,7 @@ const faqs = [
 
 <Layout
   title="The AI Builder's Masterclass — John Caleb"
-  desc="Learn by building. A 4-week live masterclass where you build real projects — websites, apps, games and AI agents. Only 30 seats. ₦30K early bird."
+  desc="Learn by building. A 4-week live masterclass where you build real projects — websites, apps, games and AI agents. Starts 9th Nov 2026. Only 30 seats. ₦30K early bird."
   metaImage="https://thejohncaleb.com/og/ai.png"
   keywords="ai masterclass, learn ai, ai course, build ai agents, ai class, john caleb, justbesocial"
   hideNav
@@ -216,6 +227,7 @@ const faqs = [
 
       <div class="mt-5 flex flex-wrap items-center gap-2">
         <span class="tag">{PRICE_EARLY} Early Bird</span>
+        <span class="tag">Starts 9th Nov 2026</span>
         <span class="w-max rounded-sm border border-secondary-200 dark:border-secondary-800 px-2 py-0.5 text-xs text-secondary-outline">
           Limited to 30 seats
         </span>
@@ -337,7 +349,8 @@ const faqs = [
       <h3 class="text-2xl font-bold mb-5">Who it's for</h3>
       <p class="text-primary-text-light/70 dark:text-primary-text-dark/70">
         Students, creators, freelancers, entrepreneurs and anyone who wants to build with AI. No
-        coding experience needed.
+        coding experience needed. Job seekers who want to stand out with real projects and
+        AI-assisted applications.
       </p>
     </section>
 
@@ -562,7 +575,7 @@ const faqs = [
 
   <script is:inline>
     (function () {
-      var target = new Date("2026-11-01T00:00:00+01:00").getTime();
+      var target = new Date("2026-11-09T19:00:00+01:00").getTime();
       var els = {
         d: document.getElementById("cd-days"),
         h: document.getElementById("cd-hours"),
