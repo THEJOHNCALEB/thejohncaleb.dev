@@ -18,8 +18,24 @@ export interface Props {
 let { title, desc, metaImage, keywords, tags = [], pubDate = null, hideNav = false } = Astro.props;
 if (!title) title = "John Caleb";
 if (!desc) desc = "I build cool stuff";
-if (!metaImage) metaImage = "https://thejohncaleb.vercel.app/images/meta.jpg";
+if (!metaImage) metaImage = "https://thejohncaleb.com/images/meta.jpg";
 if (!keywords) keywords = "john, thejohncaleb, caleb, express, c#, typescript, javascript, flutter, node, software, engineer";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? "https://thejohncaleb.com");
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "John Caleb",
+  url: "https://thejohncaleb.com",
+  email: "mailto:hey@thejohncaleb.com",
+  image: "https://thejohncaleb.com/images/me.JPG",
+  jobTitle: "Software Engineer",
+  sameAs: [
+    "https://x.com/thejohncaleb",
+    "https://github.com/thejohncaleb",
+    "https://linkedin.com/in/thejohncaleb",
+  ],
+};
 ---
 
 <!doctype html>
@@ -30,22 +46,29 @@ if (!keywords) keywords = "john, thejohncaleb, caleb, express, c#, typescript, j
     <meta name="theme-color" content="#fdf9ef" />
     <meta name="description" content={desc} />
     <meta name="keywords" content={keywords} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="alternate" type="application/rss+xml" title="John Caleb" href="/rss.xml" />
+    <link rel="alternate" type="application/feed+json" title="John Caleb" href="/feed.json" />
+    <link rel="alternate" type="text/plain" title="John Caleb (llms.txt)" href="/llms.txt" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="John Caleb" />
-    <meta property="og:site" content="https://thejohncaleb.vercel.app" />
-    <meta property="og:url" content="https://thejohncaleb.vercel.app" />
+    <meta property="og:site" content="https://thejohncaleb.com" />
+    <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={desc} />
     <meta property="og:image" content={metaImage} />
     <meta property="og:image:type" content="image/jpg">
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://thejohncaleb.vercel.app" />
+    <meta property="twitter:url" content={canonicalURL.href} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={desc} />
     <meta property="twitter:image" content={metaImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
 
     {!!pubDate ? <meta name="article:published_time" content={pubDate.toISOString()} /> : null}
     {tags?.map((tag) => <meta name="article:tag" content={tag} />)}

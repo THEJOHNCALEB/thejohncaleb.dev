@@ -18,15 +18,19 @@ export async function GET(context: { site: string }) {
 
   const jsonFeed = {
     version: "https://jsonfeed.org/version/1",
-    title: "Ayodeji's Blog",
+    title: "John Caleb",
     home_page_url: site,
     feed_url: `${site}feed.json`,
     author: {
-      name: "Ayodeji Osasona",
-      url: "https://trulyao.dev",
+      name: "John Caleb",
+      url: "https://thejohncaleb.com",
     },
     items: posts,
   };
 
-  return new Response(JSON.stringify(jsonFeed));
+  return new Response(JSON.stringify(jsonFeed), {
+    headers: {
+      "Content-Type": "application/feed+json; charset=utf-8",
+    },
+  });
 }

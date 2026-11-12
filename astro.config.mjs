@@ -19,6 +19,7 @@ export default defineConfig({
   },
   redirects: {
     "/live": { status: 302, destination: "https://youtube.com/@thejohncaleb" },
+    "/call": { status: 302, destination: "https://cal.com/thejohncaleb/15min" },
     "/tlc": { status: 302, destination: "https://canva.link/g0ev0fmlx720c32" },
     "/cv": {
       status: 302,

@@ -21,7 +21,7 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title} desc={post.data.description} keywords={post.data.keywords} tags={post.data.tags} pubDate={post.data.date} metaImage={`https://thejohncaleb.vercel.app/og/${post.slug}.png`}>
+<Layout title={post.data.title} desc={post.data.description} keywords={post.data.keywords} tags={post.data.tags} pubDate={post.data.date} metaImage={new URL(`/og/${post.slug}.png`, Astro.site ?? "https://thejohncaleb.com").href}>
   <main class="container">
 
     <article class="mt-6">

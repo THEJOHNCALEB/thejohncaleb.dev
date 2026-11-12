@@ -18,7 +18,7 @@ export function getMetaUrl(slug: string) {
     return cachedMetaUrl.href;
   }
 
-  cachedMetaUrl = new URL("https://thejohncaleb.vercel.app");
+  cachedMetaUrl = new URL("https://thejohncaleb.com");
   cachedMetaUrl.pathname = `/og/${slug}.png`;
   return cachedMetaUrl.href;
 }
