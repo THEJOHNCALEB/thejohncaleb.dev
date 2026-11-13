@@ -54,9 +54,7 @@ export const GET: APIRoute = async ({ site }) => {
     .map(
       ({ loc, lastmod }) =>
         `  <url>\n    <loc>${escapeXml(loc)}</loc>\n${
-          lastmod
-            ? `    <lastmod>${lastmod.toISOString()}</lastmod>\n`
-            : ""
+          lastmod ? `    <lastmod>${lastmod.toISOString()}</lastmod>\n` : ""
         }  </url>`,
     )
     .join("\n");

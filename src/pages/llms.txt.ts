@@ -36,22 +36,44 @@ export const GET: APIRoute = async ({ site }) => {
     ``,
     `## Main pages`,
     ``,
-    link("Home", new URL("/", base).href, "About John and latest content"),
-    link("Posts", new URL("/posts", base).href, "All blog posts"),
-    link("Notes", new URL("/notes", base).href, "Short notes on software, design, and more"),
-    link("Projects", new URL("/projects", base).href, "Side projects and products"),
-    link("Talks", new URL("/talks", base).href, "Conference talks and slides"),
-    link("Tools", new URL("/tools", base).href, "Languages, frameworks, databases, cloud, and AI tools John uses"),
-    link("AI Masterclass", new URL("/ai", base).href, "The AI Builder's Masterclass course details"),
+    link("Home", new URL("/", base).href, "About John and latest content") +
+      ` ([Markdown](${new URL("/index.md", base).href}))`,
+    link("Posts", new URL("/posts", base).href, "All blog posts") +
+      ` ([Markdown](${new URL("/posts.md", base).href}))`,
+    link(
+      "Notes",
+      new URL("/notes", base).href,
+      "Short notes on software, design, and more",
+    ) + ` ([Markdown](${new URL("/notes.md", base).href}))`,
+    link(
+      "Projects",
+      new URL("/projects", base).href,
+      "Side projects and products",
+    ) + ` ([Markdown](${new URL("/projects.md", base).href}))`,
+    link("Talks", new URL("/talks", base).href, "Conference talks and slides") +
+      ` ([Markdown](${new URL("/talks.md", base).href}))`,
+    link(
+      "Tools",
+      new URL("/tools", base).href,
+      "Languages, frameworks, databases, cloud, and AI tools John uses",
+    ) + ` ([Markdown](${new URL("/tools.md", base).href}))`,
+    link(
+      "AI Masterclass",
+      new URL("/ai", base).href,
+      "The AI Builder's Masterclass course details",
+    ) + ` ([Markdown](${new URL("/ai.md", base).href}))`,
+    ``,
+    `Every page on this site also has a plain Markdown version: append \`.md\` to its URL. For example, \`/posts/<slug>.md\`, \`/projects.md\`, and \`/tags/<tag>.md\`.`,
     ``,
     `## Posts`,
     ``,
-    ...sortedPosts.map((post) =>
-      link(
-        post.data.title,
-        new URL(`/posts/${post.slug}`, base).href,
-        `${post.data.description} (${post.data.date.toISOString().split("T")[0]})`,
-      ),
+    ...sortedPosts.map(
+      (post) =>
+        link(
+          post.data.title,
+          new URL(`/posts/${post.slug}`, base).href,
+          `${post.data.description} (${post.data.date.toISOString().split("T")[0]})`,
+        ) + ` ([Markdown](${new URL(`/posts/${post.slug}.md`, base).href}))`,
     ),
     ``,
     ...(sortedNotes.length > 0
@@ -61,7 +83,7 @@ export const GET: APIRoute = async ({ site }) => {
           ...sortedNotes.map((note) =>
             link(
               note.data.title,
-              new URL(`/notes/${note.slug}`, base).href,
+              new URL("/notes", base).href,
               `${note.data.description ?? ""} (${note.data.date.toISOString().split("T")[0]})`.trim(),
             ),
           ),
@@ -69,6 +91,8 @@ export const GET: APIRoute = async ({ site }) => {
         ]
       : []),
     `## Projects`,
+    ``,
+    `Full descriptions, statuses, tags, and links for every project are available at ${new URL("/projects", base).href} and ${new URL("/projects.md", base).href}.`,
     ``,
     ...projects.map((project) =>
       link(

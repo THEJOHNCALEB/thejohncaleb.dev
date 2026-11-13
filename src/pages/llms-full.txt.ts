@@ -79,8 +79,8 @@ export const GET: APIRoute = async ({ site }) => {
       `Description: ${project.description}`,
       `Tags: ${project.tags?.filter(Boolean).join(", ") || "none"}`,
       `Links:`,
-      ...(project.links ?? []).map((projectLink) =>
-        `- ${projectLink.title}: ${projectLink.url}`,
+      ...(project.links ?? []).map(
+        (projectLink) => `- ${projectLink.title}: ${projectLink.url}`,
       ),
       ``,
     );
@@ -104,6 +104,8 @@ export const GET: APIRoute = async ({ site }) => {
     `Main pages: ${new URL("/", base).href}, ${new URL("/posts", base).href}, ${new URL("/notes", base).href}, ${new URL("/projects", base).href}, ${new URL("/talks", base).href}, ${new URL("/tools", base).href}, ${new URL("/ai", base).href}`,
     ``,
     `Feeds: ${new URL("/rss.xml", base).href} (RSS), ${new URL("/feed.json", base).href} (JSON Feed)`,
+    ``,
+    `Full Markdown versions of the remaining pages: ${new URL("/tools.md", base).href} (tools and stack), ${new URL("/ai.md", base).href} (AI masterclass), ${new URL("/index.md", base).href} (home and about)`,
     ``,
     `Contact: hey@thejohncaleb.com`,
     ``,

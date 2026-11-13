@@ -1,5 +1,6 @@
 # Allow every crawler, including AI bots, to access the entire site.
 User-agent: *
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
 Allow: /
 
 # AI / LLM crawlers (explicitly allowed)
@@ -55,3 +56,7 @@ User-agent: MistralAI-User
 Allow: /
 
 Sitemap: https://thejohncaleb.com/sitemap.xml
+
+# Plain-text index for LLMs and AI agents
+# https://thejohncaleb.com/llms.txt
+# https://thejohncaleb.com/llms-full.txt
