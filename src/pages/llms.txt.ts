@@ -133,7 +133,7 @@ export const GET: APIRoute = async ({ site }) => {
     `- X: [@thejohncaleb](https://x.com/thejohncaleb)`,
     `- GitHub: [thejohncaleb](https://github.com/thejohncaleb)`,
     `- LinkedIn: [thejohncaleb](https://linkedin.com/in/thejohncaleb)`,
-    `- Book a call: [cal.com/thejohncaleb/15min](https://cal.com/thejohncaleb/15min)`,
+    `- Book a call: [cal.com/thejohncaleb](https://cal.com/thejohncaleb)`,
     ``,
   ];
 

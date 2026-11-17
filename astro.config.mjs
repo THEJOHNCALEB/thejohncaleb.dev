@@ -17,14 +17,4 @@ export default defineConfig({
       [externalize, { domain: "https://thejohncaleb.vercel.app/" }],
     ],
   },
-  redirects: {
-    "/live": { status: 302, destination: "https://youtube.com/@thejohncaleb" },
-    "/call": { status: 302, destination: "https://cal.com/thejohncaleb/15min" },
-    "/tlc": { status: 302, destination: "https://canva.link/g0ev0fmlx720c32" },
-    "/cv": {
-      status: 302,
-      destination:
-        "https://drive.google.com/file/d/1uBOHYl83a4KrInTAt3jjN7DfUbbZ6NqQ/view",
-    },
-  },
 });

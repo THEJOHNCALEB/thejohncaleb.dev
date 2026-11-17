@@ -2,7 +2,7 @@ import type { APIRoute, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import { slugify } from "@lib/utils";
 
-const ABOUT = `Kon'nichiwa! I am John, a software engineer with years of experience in software development. Currently working at a Stealth Startup (Manchester, England), previously at Smartqix LLC (Ohio, USA) and Tirith Technology LLC (Ohio, USA). I am constantly learning and very keen on crafting the type of software experience I'd like to use and you can fall in love with. I write here from time to time.`;
+const ABOUT = `Kon'nichiwa! I am John, a software engineer with years of experience in software development. Currently working at a Stealth Startup, previously at Smartqix LLC (Ohio, USA) and Tirith Technology LLC (Ohio, USA). I am constantly learning and very keen on crafting the type of software experience I'd like to use and you can fall in love with.`;
 
 const TOOLS = [
   {
@@ -198,7 +198,7 @@ export const GET: APIRoute = async ({ params, site }) => {
       `- X: https://x.com/thejohncaleb`,
       `- GitHub: https://github.com/thejohncaleb`,
       `- LinkedIn: https://linkedin.com/in/thejohncaleb`,
-      `- Book a call: https://cal.com/thejohncaleb/15min`,
+      `- Book a call: https://cal.com/thejohncaleb`,
       ``,
     ].join("\n");
   } else if (path === "posts") {
